@@ -23,3 +23,5 @@ jobs:
         run: npx shopify theme push --store ${{ secrets.SHOPIFY_STORE }} --allow-live --password ${{ secrets.SHOPIFY_TOKEN }}
         env:
           CI: true
+
+# Rakib
