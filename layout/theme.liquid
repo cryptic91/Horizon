@@ -42,6 +42,71 @@
     {%- render 'theme-styles-variables' -%}
     {%- render 'color-palette' -%}
 
+    {% comment %} BLÓMINOR NORWAY | Quiet Luxury Foundation {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+      :root {
+        --blominor-forest: #4F6656;
+        --blominor-moss: #538666;
+        --blominor-fjord: #73AFA3;
+        --blominor-fjord-blue: #7BBFD8;
+        --blominor-deep-blue: #1A3E6C;
+        --blominor-parchment: #F7F6F2;
+        --blominor-ink: #232724;
+        --blominor-white: #FFFFFF;
+        --blominor-heading-font: "Cormorant Garamond", "Times New Roman", serif;
+        --blominor-body-font: "Inter", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      body {
+        background-color: var(--blominor-parchment) !important;
+        font-family: var(--blominor-body-font) !important;
+        color: var(--blominor-ink) !important;
+      }
+
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        font-family: var(--blominor-heading-font) !important;
+        color: var(--blominor-deep-blue) !important;
+        letter-spacing: -0.01em;
+      }
+
+      .button--primary,
+      .shopify-payment-button__button--unbranded,
+      .product-form__submit {
+        background-color: var(--blominor-forest) !important;
+        border-color: var(--blominor-forest) !important;
+        color: var(--blominor-white) !important;
+        border-radius: 2px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.08em !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+      }
+
+      .button--primary:hover,
+      .shopify-payment-button__button--unbranded:hover,
+      .product-form__submit:hover {
+        background-color: var(--blominor-moss) !important;
+        border-color: var(--blominor-moss) !important;
+      }
+
+      .announcement-bar,
+      .utility-bar {
+        background-color: var(--blominor-deep-blue) !important;
+        color: var(--blominor-parchment) !important;
+      }
+
+      .badge,
+      .card__badge {
+        background-color: var(--blominor-fjord) !important;
+        color: var(--blominor-white) !important;
+        border-radius: 999px !important;
+      }
+    </style>
+
     {% if request.design_mode %}
       {%- render 'theme-editor' -%}
     {% endif %}
