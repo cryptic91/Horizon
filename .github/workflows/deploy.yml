@@ -1,0 +1,26 @@
+name: Deploy to Shopify Dev Store
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Shopify CLI
+        run: npm install -g @shopify/cli @shopify/theme
+
+      - name: Deploy to Shopify
+        run: shopify theme push --store ${{ secrets.SHOPIFY_STORE }} --theme-editor-sync --allow-live
+        env:
+          SHOPIFY_CLI_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+
