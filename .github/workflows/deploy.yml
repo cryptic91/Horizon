@@ -23,10 +23,8 @@ jobs:
         run: |
           shopify theme push \
             --store ${{ secrets.SHOPIFY_STORE }} \
-            --theme-editor-sync \
             --allow-live \
-            --no-color
+            --no-color \
+            --password ${{ secrets.SHOPIFY_TOKEN }}
         env:
-          SHOPIFY_CLI_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
           CI: true
-
