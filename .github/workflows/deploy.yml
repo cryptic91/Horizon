@@ -20,11 +20,6 @@ jobs:
         run: npm install -g @shopify/cli
 
       - name: Deploy to Shopify
-        run: |
-          shopify theme push \
-            --store ${{ secrets.SHOPIFY_STORE }} \
-            --allow-live \
-            --no-color \
-            --password ${{ secrets.SHOPIFY_TOKEN }}
+        run: shopify theme push --store ${{ secrets.SHOPIFY_STORE }} --allow-live --password ${{ secrets.SHOPIFY_TOKEN }}
         env:
           CI: true
