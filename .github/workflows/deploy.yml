@@ -11,9 +11,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy Theme
-        uses: shopify/shopify-cli-action@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          command: theme push --store ${{ secrets.SHOPIFY_STORE }} --allow-live
+          node-version: '22'
+
+      - name: Install Shopify CLI
+        run: npm install -g @shopify/cli@latest
+
+      - name: Deploy Theme
+        run: npx shopify theme push --store ${{ secrets.SHOPIFY_STORE }} --allow-live --password ${{ secrets.SHOPIFY_TOKEN }}
         env:
-          SHOPIFY_CLI_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          CI: true
