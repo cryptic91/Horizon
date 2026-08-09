@@ -1,12 +1,4 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */{
+{
   "sections": {
     "hero_jVaWmY": {
       "type": "hero",
@@ -15,16 +7,16 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<p>Browse our latest products</p>",
-            "text_color": "{{ settings.color_palette.background }}",
+            "text": "<p>Quiet luxury from Norway</p>",
+            "text_color": "#F7F6F2",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
+            "type_preset": "h1",
+            "font": "var(--font-heading--family)",
+            "font_size": "clamp(2.5rem, 5vw, 4rem)",
+            "line_height": "1.1",
+            "letter_spacing": "-0.01em",
             "case": "none",
             "wrap": "pretty",
             "background": false,
@@ -41,13 +33,13 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Shop all",
+            "label": "Discover the collection",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
             "style_class": "button-custom",
-            "custom_button_background": "rgba(0,0,0,0)",
-            "custom_button_text": "{{ settings.color_palette.background }}",
-            "custom_button_border": "{{ settings.color_palette.background }}",
+            "custom_button_background": "#4F6656",
+            "custom_button_text": "#FFFFFF",
+            "custom_button_border": "#4F6656",
             "width": "fit-content",
             "custom_width": 100,
             "width_mobile": "fit-content",
@@ -71,24 +63,38 @@
         "open_in_new_tab": false,
         "content_direction": "column",
         "vertical_on_mobile": true,
-        "horizontal_alignment": "space-between",
+        "horizontal_alignment": "flex-start",
         "vertical_alignment": "flex-end",
         "align_baseline": true,
-        "horizontal_alignment_flex_direction_column": "center",
+        "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "flex-end",
         "gap": 24,
         "section_width": "page-width",
-        "section_height": "medium",
-        "section_height_custom": 50,
+        "section_height": "large",
+        "section_height_custom": 70,
         "background_color": "rgba(0,0,0,0)",
         "toggle_overlay": true,
-        "overlay_color": "#12121266",
-        "overlay_style": "solid",
-        "gradient_direction": "to bottom",
+        "overlay_color": "#1A3E6C4D",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
         "blurred_reflection": false,
         "reflection_opacity": 75,
-        "padding-block-start": 100,
-        "padding-block-end": 72
+        "padding-block-start": 120,
+        "padding-block-end": 100
+      }
+    },
+    "blominor_story_section": {
+      "type": "blominor-story",
+      "settings": {
+        "kicker": "Nordic botanical heritage",
+        "heading": "The Bergfrue Story",
+        "text": "<p>The Bergfrue flower grows where few things can — quiet, rugged places shaped by wind and snow. It became our first symbol: resilience, softness, and beauty carried through hard seasons.</p><p>Like the flower, our jewellery is designed to feel gentle but enduring. Each bangle and charm carries a memory, a moment, or a meaning — never just decoration.</p>",
+        "button_label": "Explore the collection",
+        "button_link": "shopify://collections/all",
+        "quote": "Beauty should feel quiet, personal, and true.",
+        "quote_author": "BLÓMINOR NORWAY",
+        "parchment_background": true,
+        "padding": 80
       }
     },
     "product_list_fa6P9H": {
@@ -130,14 +136,14 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>{{ closest.collection.title }}</h3>",
+                "text": "<h3>Curated for quiet moments</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "h4",
-                "font": "var(--font-body--family)",
-                "line_height": "normal",
-                "letter_spacing": "normal",
+                "type_preset": "h3",
+                "font": "var(--font-heading--family)",
+                "line_height": "1.2",
+                "letter_spacing": "-0.01em",
                 "case": "none",
                 "wrap": "pretty",
                 "background": false,
@@ -154,7 +160,7 @@
               "type": "_product-list-button",
               "name": "t:names.product_list_button",
               "settings": {
-                "label": "View all",
+                "label": "View all pieces",
                 "open_in_new_tab": false,
                 "style_class": "link",
                 "width": "fit-content",
@@ -175,7 +181,7 @@
           "name": "t:names.product_card",
           "static": true,
           "settings": {
-            "product_card_gap": 4,
+            "product_card_gap": 8,
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
@@ -190,7 +196,7 @@
               "type": "_product-card-gallery",
               "name": "t:names.product_card_media",
               "settings": {
-                "image_ratio": "adapt",
+                "image_ratio": "portrait",
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
@@ -211,15 +217,15 @@
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
+                "font_size": "0.95rem",
+                "line_height": "1.4",
+                "letter_spacing": "0.01em",
                 "case": "none",
                 "wrap": "pretty",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
-                "padding-block-start": 4,
+                "padding-block-start": 8,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
@@ -237,11 +243,11 @@
                 "width": "100%",
                 "alignment": "left",
                 "font": "var(--font-body--family)",
-                "font_size": "1rem",
+                "font_size": "0.9rem",
                 "line_height": "normal",
-                "letter_spacing": "normal",
+                "letter_spacing": "0.02em",
                 "case": "none",
-                "padding-block-start": 0,
+                "padding-block-start": 4,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
@@ -261,25 +267,48 @@
         "collection": "all",
         "layout_type": "grid",
         "carousel_on_mobile": false,
-        "max_products": 8,
+        "max_products": 4,
         "columns": 4,
         "mobile_columns": "2",
         "mobile_card_size": "60cqw",
-        "columns_gap": 8,
-        "rows_gap": 24,
+        "columns_gap": 16,
+        "rows_gap": 32,
         "icons_style": "arrow",
         "icons_shape": "none",
         "section_width": "page-width",
         "horizontal_alignment": "flex-start",
-        "gap": 28,
-        "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "gap": 32,
+        "background_color": "#FFFFFF",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
+    "trust_marquee_section": {
+      "type": "marquee",
+      "blocks": {
+        "marquee_text_1": {
+          "type": "text",
+          "settings": {
+            "text": "Free shipping across Norway • Recyclable packaging • Hand-finished in small batches • Inspired by Nordic botanicals"
+          }
+        }
+      },
+      "block_order": ["marquee_text_1"],
+      "settings": {
+        "speed": 30,
+        "direction": "left",
+        "pause_on_hover": true,
+        "background_color": "#1A3E6C",
+        "text_color": "#F7F6F2",
+        "padding-block-start": 16,
+        "padding-block-end": 16
       }
     }
   },
   "order": [
     "hero_jVaWmY",
-    "product_list_fa6P9H"
+    "blominor_story_section",
+    "product_list_fa6P9H",
+    "trust_marquee_section"
   ]
 }
