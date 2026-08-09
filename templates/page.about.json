@@ -1,0 +1,102 @@
+{
+  "sections": {
+    "about_hero": {
+      "type": "hero",
+      "blocks": {
+        "about_heading": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Rooted in Norwegian quietude</p>",
+            "text_color": "#F7F6F2",
+            "type_preset": "h1",
+            "font": "var(--font-heading--family)",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": ["about_heading"],
+      "settings": {
+        "section_height": "medium",
+        "toggle_overlay": true,
+        "overlay_color": "#1A3E6C4D",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center"
+      }
+    },
+    "about_story": {
+      "type": "blominor-story",
+      "settings": {
+        "kicker": "Our origin",
+        "heading": "Why Bergfrue?",
+        "text": "<p>The Bergfrue flower grows in quiet, rugged places — shaped by wind, snow, and silence. It doesn’t shout for attention. It simply endures, blooms, and carries beauty through hard seasons.</p><p>That resilience became our first symbol. BLÓMINOR NORWAY was born from a simple belief: jewellery should feel like a kept promise — gentle, enduring, and deeply personal.</p><p>We design for women who carry stories, not just accessories. Each bangle and charm is meant to hold a memory, a moment, or a meaning that only you understand.</p>",
+        "quote": "Beauty should feel quiet, personal, and true.",
+        "quote_author": "BLÓMINOR NORWAY",
+        "parchment_background": true,
+        "padding": 80
+      }
+    },
+    "about_values": {
+      "type": "media-with-content",
+      "blocks": {
+        "value_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Hand-finished in small batches</h3><p>Every piece is inspected by human hands before it leaves us. No mass production. No shortcuts. Just careful attention to the details that make quiet luxury feel real.</p>"
+          }
+        }
+      },
+      "block_order": ["value_1"],
+      "settings": {
+        "content_direction": "row",
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "center",
+        "gap": 48,
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
+    "about_cta": {
+      "type": "hero",
+      "blocks": {
+        "cta_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to find your symbol?</p>",
+            "text_color": "#1A3E6C",
+            "type_preset": "h2",
+            "alignment": "center"
+          }
+        },
+        "cta_button": {
+          "type": "button",
+          "settings": {
+            "label": "Explore the collection",
+            "link": "shopify://collections/all",
+            "style_class": "button-custom",
+            "custom_button_background": "#4F6656",
+            "custom_button_text": "#FFFFFF",
+            "custom_button_border": "#4F6656"
+          }
+        }
+      },
+      "block_order": ["cta_text", "cta_button"],
+      "settings": {
+        "section_height": "small",
+        "background_color": "#F7F6F2",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 24,
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    }
+  },
+  "order": [
+    "about_hero",
+    "about_story",
+    "about_values",
+    "about_cta"
+  ]
+}

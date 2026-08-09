@@ -1,0 +1,102 @@
+{
+  "sections": {
+    "packaging_hero": {
+      "type": "hero",
+      "blocks": {
+        "packaging_heading": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Packaged with intention</p>",
+            "text_color": "#F7F6F2",
+            "type_preset": "h1",
+            "font": "var(--font-heading--family)",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": ["packaging_heading"],
+      "settings": {
+        "section_height": "medium",
+        "toggle_overlay": true,
+        "overlay_color": "#1A3E6C4D",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center"
+      }
+    },
+    "packaging_story": {
+      "type": "blominor-story",
+      "settings": {
+        "kicker": "Our promise",
+        "heading": "Recyclable. Reusable. Respectful.",
+        "text": "<p>Your BLÓMINOR piece arrives in packaging designed to be kept, reused, or gently returned to the earth.</p><p>We use FSC-certified paper, soy-based inks, and zero plastic. The box is meant to live on your shelf — a quiet reminder of the story inside.</p><p>Because luxury shouldn’t cost the earth. It should honour it.</p>",
+        "quote": "What we give to the world should be as beautiful as what we create.",
+        "quote_author": "BLÓMINOR NORWAY",
+        "parchment_background": true,
+        "padding": 80
+      }
+    },
+    "packaging_details": {
+      "type": "media-with-content",
+      "blocks": {
+        "detail_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>What’s inside</h3><ul><li>FSC-certified kraft box with magnetic closure</li><li>Organic cotton pouch for safekeeping</li><li>Handwritten care card on recycled paper</li><li>Seed paper tag — plant it to grow wildflowers</li></ul>"
+          }
+        }
+      },
+      "block_order": ["detail_1"],
+      "settings": {
+        "content_direction": "row",
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "center",
+        "gap": 48,
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
+    "packaging_cta": {
+      "type": "hero",
+      "blocks": {
+        "packaging_cta_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Questions about our packaging?</p>",
+            "text_color": "#1A3E6C",
+            "type_preset": "h2",
+            "alignment": "center"
+          }
+        },
+        "packaging_cta_button": {
+          "type": "button",
+          "settings": {
+            "label": "Contact us",
+            "link": "shopify://pages/contact",
+            "style_class": "button-custom",
+            "custom_button_background": "#4F6656",
+            "custom_button_text": "#FFFFFF",
+            "custom_button_border": "#4F6656"
+          }
+        }
+      },
+      "block_order": ["packaging_cta_text", "packaging_cta_button"],
+      "settings": {
+        "section_height": "small",
+        "background_color": "#F7F6F2",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 24,
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    }
+  },
+  "order": [
+    "packaging_hero",
+    "packaging_story",
+    "packaging_details",
+    "packaging_cta"
+  ]
+}
