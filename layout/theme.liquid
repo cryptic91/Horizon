@@ -42,43 +42,43 @@
     {%- render 'theme-styles-variables' -%}
     {%- render 'color-palette' -%}
 
-    {% comment %} BLÓMINOR NORWAY | Quiet Luxury Foundation {% endcomment %}
+    {% comment %} Design system foundation {% endcomment %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
       :root {
-        --blominor-forest: #4F6656;
-        --blominor-moss: #538666;
-        --blominor-fjord: #73AFA3;
-        --blominor-fjord-blue: #7BBFD8;
-        --blominor-deep-blue: #1A3E6C;
-        --blominor-parchment: #F7F6F2;
-        --blominor-ink: #232724;
-        --blominor-white: #FFFFFF;
-        --blominor-heading-font: "Cormorant Garamond", "Times New Roman", serif;
-        --blominor-body-font: "Inter", "Helvetica Neue", Arial, sans-serif;
+        --color-forest: #4F6656;
+        --color-moss: #538666;
+        --color-fjord: #73AFA3;
+        --color-fjord-blue: #7BBFD8;
+        --color-deep-blue: #1A3E6C;
+        --color-parchment: #F7F6F2;
+        --color-ink: #232724;
+        --color-white: #FFFFFF;
+        --font-heading: "Cormorant Garamond", "Times New Roman", serif;
+        --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
       }
 
       body {
-        background-color: var(--blominor-parchment) !important;
-        font-family: var(--blominor-body-font) !important;
-        color: var(--blominor-ink) !important;
+        background-color: var(--color-parchment) !important;
+        font-family: var(--font-body) !important;
+        color: var(--color-ink) !important;
       }
 
       h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-        font-family: var(--blominor-heading-font) !important;
-        color: var(--blominor-deep-blue) !important;
+        font-family: var(--font-heading) !important;
+        color: var(--color-deep-blue) !important;
         letter-spacing: -0.01em;
       }
 
       .button--primary,
       .shopify-payment-button__button--unbranded,
       .product-form__submit {
-        background-color: var(--blominor-forest) !important;
-        border-color: var(--blominor-forest) !important;
-        color: var(--blominor-white) !important;
+        background-color: var(--color-forest) !important;
+        border-color: var(--color-forest) !important;
+        color: var(--color-white) !important;
         border-radius: 2px !important;
         text-transform: uppercase !important;
         letter-spacing: 0.08em !important;
@@ -89,24 +89,24 @@
       .button--primary:hover,
       .shopify-payment-button__button--unbranded:hover,
       .product-form__submit:hover {
-        background-color: var(--blominor-moss) !important;
-        border-color: var(--blominor-moss) !important;
+        background-color: var(--color-moss) !important;
+        border-color: var(--color-moss) !important;
       }
 
       .announcement-bar,
       .utility-bar {
-        background-color: var(--blominor-deep-blue) !important;
-        color: var(--blominor-parchment) !important;
+        background-color: var(--color-deep-blue) !important;
+        color: var(--color-parchment) !important;
       }
 
       .badge,
       .card__badge {
-        background-color: var(--blominor-fjord) !important;
-        color: var(--blominor-white) !important;
+        background-color: var(--color-fjord) !important;
+        color: var(--color-white) !important;
         border-radius: 999px !important;
       }
 
-      /* BLÓMINOR NORWAY | Hero Premium Treatment */
+      /* Hero premium treatment */
       .hero__container::after {
         content: '';
         position: absolute;
@@ -177,6 +177,79 @@
         .hero__content-wrapper .button-custom {
           padding: 14px 28px !important;
           font-size: 12px !important;
+        }
+      }
+
+      /* Footer premium treatment */
+      footer {
+        background-color: #1A3E6C !important;
+        color: #F7F6F2 !important;
+        padding-top: 64px !important;
+        padding-bottom: 48px !important;
+      }
+
+      footer a,
+      footer .link,
+      footer .footer__link {
+        color: #F7F6F2 !important;
+        text-decoration: none !important;
+        transition: color 0.25s ease;
+      }
+
+      footer a:hover,
+      footer .link:hover,
+      footer .footer__link:hover {
+        color: #73AFA3 !important;
+      }
+
+      footer h2,
+      footer h3,
+      footer h4,
+      footer .footer__heading {
+        color: #FFFFFF !important;
+        font-family: "Cormorant Garamond", "Times New Roman", serif !important;
+        letter-spacing: -0.01em;
+        margin-bottom: 20px !important;
+      }
+
+      footer .footer__newsletter input,
+      footer .newsletter-form__input {
+        background-color: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        color: #FFFFFF !important;
+        border-radius: 2px !important;
+        padding: 14px 16px !important;
+      }
+
+      footer .footer__newsletter button,
+      footer .newsletter-form__button {
+        background-color: #4F6656 !important;
+        color: #FFFFFF !important;
+        border: none !important;
+        border-radius: 2px !important;
+        padding: 14px 24px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.08em !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+      }
+
+      footer .footer__newsletter button:hover,
+      footer .newsletter-form__button:hover {
+        background-color: #538666 !important;
+      }
+
+      footer .copyright,
+      footer .footer__copyright {
+        color: rgba(247, 246, 242, 0.7) !important;
+        font-size: 13px !important;
+        letter-spacing: 0.02em;
+      }
+
+      @media screen and (max-width: 749px) {
+        footer {
+          padding-top: 48px !important;
+          padding-bottom: 32px !important;
         }
       }
     </style>
