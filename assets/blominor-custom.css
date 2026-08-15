@@ -453,4 +453,51 @@ input:focus, textarea:focus, select:focus {
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--blm-muted); }
 
+/* ------------------------------------------------------------------------
+   16. Hero refinements
+   Horizon's hero__container is already section--full-width by markup;
+   the visible gap issue is doubled padding: base.css's .spacing-style
+   (padding-block, from JSON padding-block-start/end) collides with our
+   own section-7 padding-top/bottom override. Fixed here by zeroing the
+   hero's contribution when another section follows, so the FOLLOWING
+   section's own top padding is the only gap. See NIGHT-LOG for detail.
+   ------------------------------------------------------------------------ */
+.hero__container {
+  width: 100%;
+  max-width: none;
+}
+
+/* Collapse doubled gap between hero and the section right after it */
+.shopify-section:has(> .hero__container):has(+ .shopify-section) .hero__container {
+  padding-bottom: 0 !important;
+}
+
+/* Hero content: vertical centering + generous padding */
+.hero__content-wrapper {
+  display: flex;
+  align-items: center !important;
+  justify-content: center;
+  padding: var(--blm-space-2xl) var(--blm-space-lg);
+}
+
+/* Hero heading — editorial scale */
+.hero__content-wrapper h1,
+.hero__content-wrapper .h1 {
+  font-size: clamp(3rem, 6vw, 5.5rem) !important;
+}
+
+/* Hero subheading / body text — lighter, constrained measure */
+.hero__content-wrapper .text-block p,
+.hero__content-wrapper h2 {
+  max-width: 42ch;
+  font-weight: 400;
+}
+
+/* Hero button — larger touch target, matches editorial scale */
+.hero__content-wrapper .button--primary,
+.hero__content-wrapper .button-custom {
+  padding: 16px 42px !important;
+  font-size: 0.9375rem !important;
+}
+
 /* END OF FILE */
