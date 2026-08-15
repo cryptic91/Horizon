@@ -7,7 +7,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<p>Quiet luxury from Norway</p>",
+            "text": "<!-- PLACEHOLDER: confirm with Aisha --><p>Inspired by Nordic nature.</p>",
             "text_color": "#F7F6F2",
             "width": "fit-content",
             "max_width": "normal",
@@ -23,6 +23,54 @@
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_subheading_blm": {
+          "type": "text",
+          "name": "t:names.subheading",
+          "settings": {
+            "text": "<!-- PLACEHOLDER: confirm with Aisha --><p>Made to be lived in.</p>",
+            "text_color": "#F7F6F2",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h4",
+            "font": "var(--font-heading--family)",
+            "line_height": "1.2",
+            "case": "none",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 8,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_body_blm": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<!-- PLACEHOLDER: confirm with Aisha --><p>Handcrafted jewellery rooted in the quiet strength of Norway — the Bergfrue flower, the fjords, the northern light.</p>",
+            "text_color": "#F7F6F2",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "line_height": "1.5",
+            "case": "none",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 12,
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
@@ -50,6 +98,8 @@
       },
       "block_order": [
         "text_YLPk4p",
+        "text_subheading_blm",
+        "text_body_blm",
         "button_H9gpTf"
       ],
       "name": "t:names.hero",
