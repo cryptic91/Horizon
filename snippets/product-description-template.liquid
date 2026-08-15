@@ -1,95 +1,44 @@
-<div class="blominor-product-description">
-  {% if product.metafields.custom.story_kicker != blank %}
-    <span class="blominor-product-description__kicker">
-      {{ product.metafields.custom.story_kicker }}
-    </span>
-  {% endif %}
+<div class="blm-story-grid">
+  <div class="blm-story-grid__intro">
+    {% if product.metafields.custom.story_kicker != blank %}
+      <span class="blm-eyebrow blominor-product-description__kicker">
+        {{ product.metafields.custom.story_kicker }}
+      </span>
+    {% endif %}
 
-  {% if product.metafields.custom.story_heading != blank %}
-    <h3 class="blominor-product-description__heading">
-      {{ product.metafields.custom.story_heading }}
-    </h3>
-  {% endif %}
+    {% if product.metafields.custom.story_heading != blank %}
+      <h3 class="blominor-product-description__heading">
+        {{ product.metafields.custom.story_heading }}
+      </h3>
+    {% endif %}
+  </div>
 
-  {% if product.metafields.custom.story_text != blank %}
-    <div class="blominor-product-description__text rte">
-      {{ product.metafields.custom.story_text }}
-    </div>
-  {% endif %}
+  <div class="blm-story-grid__body">
+    {% if product.metafields.custom.story_text != blank %}
+      <div class="blominor-product-description__text rte">
+        {{ product.metafields.custom.story_text }}
+      </div>
+    {% endif %}
 
-  {% if product.metafields.custom.materials != blank %}
-    <div class="blominor-product-description__materials">
-      <h4>Materials & Craft</h4>
-      <p>{{ product.metafields.custom.materials }}</p>
-    </div>
-  {% endif %}
+    {% if product.metafields.custom.materials != blank %}
+      <div class="blominor-product-description__materials">
+        <h4>Materials & Craft</h4>
+        <p>{{ product.metafields.custom.materials }}</p>
+      </div>
+    {% endif %}
 
-  {% if product.metafields.custom.symbolism != blank %}
-    <div class="blominor-product-description__symbolism">
-      <h4>Symbolism</h4>
-      <p>{{ product.metafields.custom.symbolism }}</p>
-    </div>
-  {% endif %}
+    {% if product.metafields.custom.symbolism != blank %}
+      <div class="blominor-product-description__symbolism">
+        <h4>Symbolism</h4>
+        <p>{{ product.metafields.custom.symbolism }}</p>
+      </div>
+    {% endif %}
 
-  {% if product.metafields.custom.care_instructions != blank %}
-    <div class="blominor-product-description__care">
-      <h4>Care Instructions</h4>
-      <p>{{ product.metafields.custom.care_instructions }}</p>
-    </div>
-  {% endif %}
+    {% if product.metafields.custom.care_instructions != blank %}
+      <div class="blominor-product-description__care">
+        <h4>Care Instructions</h4>
+        <p>{{ product.metafields.custom.care_instructions }}</p>
+      </div>
+    {% endif %}
+  </div>
 </div>
-
-<style>
-  .blominor-product-description {
-    max-width: 680px;
-    margin: 32px auto;
-    padding: 0 16px;
-  }
-
-  .blominor-product-description__kicker {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: #538666;
-    margin-bottom: 12px;
-  }
-
-  .blominor-product-description__heading {
-    font-family: "Cormorant Garamond", "Times New Roman", serif;
-    font-size: 28px;
-    line-height: 1.2;
-    color: #1A3E6C;
-    margin: 0 0 20px;
-  }
-
-  .blominor-product-description__text {
-    color: #232724;
-    font-size: 16px;
-    line-height: 1.75;
-    margin-bottom: 28px;
-  }
-
-  .blominor-product-description__materials,
-  .blominor-product-description__symbolism,
-  .blominor-product-description__care {
-    margin-top: 24px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(26, 62, 108, 0.1);
-  }
-
-  .blominor-product-description h4 {
-    font-family: "Cormorant Garamond", "Times New Roman", serif;
-    font-size: 20px;
-    color: #1A3E6C;
-    margin: 0 0 10px;
-  }
-
-  .blominor-product-description p {
-    color: #232724;
-    font-size: 15px;
-    line-height: 1.6;
-    margin: 0;
-  }
-</style>

@@ -1,0 +1,24 @@
+<div class="blm-product-storytelling blm-cream-section" {{ section.shopify_attributes }}>
+  <div class="blm-container">
+    {% render 'product-description-template' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product storytelling",
+  "tag": "section",
+  "class": "blm-product-storytelling-section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Renders this product's story, materials, symbolism, and care notes from metafields (namespace: custom — story_kicker, story_heading, story_text, materials, symbolism, care_instructions). Add per-product via Settings > Custom data > Products. Sections with no metafields filled in render as an empty block."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product storytelling"
+    }
+  ]
+}
+{% endschema %}
