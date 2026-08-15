@@ -1,0 +1,117 @@
+{% comment %}
+  Combined two-column contact section: brand info (left) + native Shopify
+  contact form (right). Built as one section rather than two separate
+  stacked sections because Horizon has no section-group mechanism for
+  placing independent top-level sections side by side outside header/footer
+  groups — see NIGHT-LOG.md for the reasoning.
+{% endcomment %}
+<div class="blm-contact" {{ section.shopify_attributes }}>
+  <div class="blm-container blm-contact__grid">
+    <div class="blm-contact__info">
+      {% if section.settings.info_heading != blank %}
+        <span class="blm-eyebrow">{{ section.settings.info_heading }}</span>
+      {% endif %}
+
+      {% if section.settings.email != blank %}
+        <div class="blm-contact__row">
+          <span class="blm-contact__label">Email</span>
+          <a class="blm-contact__value" href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a>
+        </div>
+      {% endif %}
+
+      {% if section.settings.instagram != blank %}
+        <div class="blm-contact__row">
+          <span class="blm-contact__label">Instagram</span>
+          <a class="blm-contact__value" href="https://instagram.com/{{ section.settings.instagram | remove: '@' }}" target="_blank" rel="noopener">{{ section.settings.instagram }}</a>
+        </div>
+      {% endif %}
+
+      {% if section.settings.address != blank %}
+        <div class="blm-contact__row">
+          <span class="blm-contact__label">Studio</span>
+          <span class="blm-contact__value">{{ section.settings.address }}</span>
+        </div>
+      {% endif %}
+
+      {% if section.settings.response_time != blank %}
+        <div class="blm-contact__row">
+          <span class="blm-contact__label">Response time</span>
+          <span class="blm-contact__value">{{ section.settings.response_time }}</span>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="blm-contact__form-wrap">
+      {% form 'contact', class: 'blm-contact__form' %}
+        {% if form.posted_successfully? %}
+          <p class="blm-contact__success">Thank you — your message has reached us.</p>
+        {% endif %}
+        {% if form.errors %}
+          <p class="blm-contact__error">{{ form.errors.messages['base'] }}</p>
+        {% endif %}
+
+        <div class="blm-contact__field">
+          <label for="ContactFormName">Name</label>
+          <input type="text" id="ContactFormName" name="contact[name]" value="{% if form.name %}{{ form.name }}{% endif %}">
+        </div>
+
+        <div class="blm-contact__field">
+          <label for="ContactFormEmail">Email</label>
+          <input type="email" id="ContactFormEmail" name="contact[email]" required value="{% if form.email %}{{ form.email }}{% endif %}">
+        </div>
+
+        <div class="blm-contact__field">
+          <label for="ContactFormMessage">Message</label>
+          <textarea id="ContactFormMessage" name="contact[body]" rows="6">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+        </div>
+
+        <button type="submit" class="button button--primary">Send message</button>
+      {% endform %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact (info + form)",
+  "tag": "section",
+  "class": "blm-contact-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "info_heading",
+      "label": "Eyebrow label",
+      "default": "Get in touch"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email",
+      "default": "hello@blominor.com"
+    },
+    {
+      "type": "text",
+      "id": "instagram",
+      "label": "Instagram handle",
+      "default": "@blominor"
+    },
+    {
+      "type": "text",
+      "id": "address",
+      "label": "Studio address",
+      "default": "Oslo, Norway"
+    },
+    {
+      "type": "text",
+      "id": "response_time",
+      "label": "Response time text",
+      "default": "Within 48 hours"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact (info + form)"
+    }
+  ]
+}
+{% endschema %}

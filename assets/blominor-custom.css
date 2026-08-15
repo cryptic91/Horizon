@@ -705,4 +705,98 @@ input:focus, textarea:focus, select:focus {
   color: var(--blm-muted);
 }
 
+/* ------------------------------------------------------------------------
+   20. Contact (sections/blm-contact-info.liquid)
+   ------------------------------------------------------------------------ */
+.blm-contact {
+  background: var(--blm-parchment);
+  padding-top: var(--blm-space-2xl);
+  padding-bottom: var(--blm-space-3xl);
+}
+
+.blm-contact__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--blm-space-2xl);
+}
+
+@media (min-width: 900px) {
+  .blm-contact__grid {
+    grid-template-columns: 2fr 3fr; /* ~40% info / 60% form */
+    gap: 64px;
+  }
+}
+
+.blm-contact__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.blm-contact__row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: var(--blm-space-lg);
+}
+
+.blm-contact__label {
+  font-family: var(--blm-font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blm-muted);
+}
+
+.blm-contact__value {
+  font-family: var(--blm-font-heading);
+  font-size: 1.25rem;
+  color: var(--blm-ink);
+}
+a.blm-contact__value:hover {
+  color: var(--blm-forest);
+}
+
+.blm-contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--blm-space-lg);
+}
+
+.blm-contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.blm-contact__field label {
+  font-family: var(--blm-font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--blm-muted);
+}
+
+.blm-contact__field input,
+.blm-contact__field textarea {
+  border: 1px solid var(--blm-border);
+  outline: none;
+  box-shadow: none;
+}
+.blm-contact__field input:focus,
+.blm-contact__field textarea:focus {
+  border-color: var(--blm-forest);
+  box-shadow: none;
+}
+
+.blm-contact__form .button--primary {
+  align-self: flex-start;
+}
+
+.blm-contact__success {
+  color: var(--blm-forest);
+}
+.blm-contact__error {
+  color: #a13d3d;
+}
+
 /* END OF FILE */
