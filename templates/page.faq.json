@@ -15,56 +15,56 @@
           "type": "faq_item",
           "settings": {
             "question": "Where is Blóminor made?",
-            "answer": "<!-- PLACEHOLDER: confirm with Aisha --><p>Every piece begins and ends in Norway, hand-finished in small batches rather than made to scale.</p>"
+            "answer": "<p>Every piece begins and ends in Norway, hand-finished in small batches rather than made to scale.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
             "question": "What materials do you use?",
-            "answer": "<!-- PLACEHOLDER: confirm with Aisha --><p>We work in recycled sterling silver and gold vermeil, chosen for how quietly they wear over time.</p>"
+            "answer": "<p>We work in recycled sterling silver and gold vermeil, chosen for how quietly they wear over time.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
             "question": "How do I care for my jewellery?",
-            "answer": "<!-- PLACEHOLDER: confirm with Aisha --><p>Keep each piece dry and out of direct sun. A soft cloth, gently used, is all it should ever need.</p>"
+            "answer": "<p>Keep each piece dry and out of direct sun. A soft cloth, gently used, is all it should ever need.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
             "question": "Do you offer engraving?",
-            "answer": "<!-- PLACEHOLDER: confirm with Aisha --><p>Yes — a small mark, a date, an initial. Add your note at checkout and we'll carry it carefully.</p>"
+            "answer": "<p>Yes — a small mark, a date, an initial. Add your note at checkout and we'll carry it carefully.</p>"
           }
         },
         "faq_5": {
           "type": "faq_item",
           "settings": {
             "question": "What is the Bergfrue flower?",
-            "answer": "<!-- PLACEHOLDER: confirm with Aisha --><p>The Bergfrue grows in quiet, rugged places, shaped by wind and snow. It is our first symbol — resilience without noise.</p>"
+            "answer": "<p>The Bergfrue grows in quiet, rugged places, shaped by wind and snow. It is our first symbol — resilience without noise.</p>"
           }
         },
         "faq_6": {
           "type": "faq_item",
           "settings": {
             "question": "How long does shipping take?",
-            "answer": "<!-- PLACEHOLDER: confirm with Aisha --><p>5–7 days within the EU, 10–14 days further afield. Each order moves at its own unhurried pace.</p>"
+            "answer": "<p>5–7 days within the EU, 10–14 days further afield. Each order moves at its own unhurried pace.</p>"
           }
         },
         "faq_7": {
           "type": "faq_item",
           "settings": {
             "question": "What is your return policy?",
-            "answer": "<!-- PLACEHOLDER: confirm with Aisha --><p>30 days to be certain. If a piece doesn't feel right, return it and we'll make it easy.</p>"
+            "answer": "<p>30 days to be certain. If a piece doesn't feel right, return it and we'll make it easy.</p>"
           }
         },
         "faq_8": {
           "type": "faq_item",
           "settings": {
             "question": "Is the packaging sustainable?",
-            "answer": "<!-- PLACEHOLDER: confirm with Aisha --><p>FSC-certified paper, soy-based inks, no plastic. Made to be kept, reused, or gently returned to the earth.</p>"
+            "answer": "<p>FSC-certified paper, soy-based inks, no plastic. Made to be kept, reused, or gently returned to the earth.</p>"
           }
         }
       },

@@ -15,28 +15,28 @@
           "type": "column",
           "settings": {
             "title": "Shipping worldwide",
-            "content": "<!-- PLACEHOLDER: confirm with Aisha --><p>We ship across the EU and internationally, each order packed with the same quiet care regardless of distance.</p>"
+            "content": "<p>We ship across the EU and internationally, each order packed with the same quiet care regardless of distance.</p>"
           }
         },
         "col_2": {
           "type": "column",
           "settings": {
             "title": "Delivery times",
-            "content": "<!-- PLACEHOLDER: confirm with Aisha --><p>5–7 days within the EU. 10–14 days for the rest of the world. Tracking is sent the moment your order leaves us.</p>"
+            "content": "<p>5–7 days within the EU. 10–14 days for the rest of the world. Tracking is sent the moment your order leaves us.</p>"
           }
         },
         "col_3": {
           "type": "column",
           "settings": {
             "title": "Returns",
-            "content": "<!-- PLACEHOLDER: confirm with Aisha --><p>30 days to decide. If something isn't right, return it to us in its original condition for a full refund.</p>"
+            "content": "<p>30 days to decide. If something isn't right, return it to us in its original condition for a full refund.</p>"
           }
         },
         "col_4": {
           "type": "column",
           "settings": {
             "title": "Exchanges",
-            "content": "<!-- PLACEHOLDER: confirm with Aisha --><p>Free exchanges within 30 days. Write to us and we'll take care of the rest.</p>"
+            "content": "<p>Free exchanges within 30 days. Write to us and we'll take care of the rest.</p>"
           }
         }
       },

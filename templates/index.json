@@ -7,7 +7,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<!-- PLACEHOLDER: confirm with Aisha --><p>Inspired by Nordic nature.</p>",
+            "text": "<p>Inspired by Nordic nature.</p>",
             "text_color": "#F7F6F2",
             "width": "fit-content",
             "max_width": "normal",
@@ -33,7 +33,7 @@
           "type": "text",
           "name": "t:names.subheading",
           "settings": {
-            "text": "<!-- PLACEHOLDER: confirm with Aisha --><p>Made to be lived in.</p>",
+            "text": "<p>Made to be lived in.</p>",
             "text_color": "#F7F6F2",
             "width": "fit-content",
             "max_width": "normal",
@@ -57,7 +57,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<!-- PLACEHOLDER: confirm with Aisha --><p>Handcrafted jewellery rooted in the quiet strength of Norway — the Bergfrue flower, the fjords, the northern light.</p>",
+            "text": "<p>Handcrafted jewellery rooted in the quiet strength of Norway — the Bergfrue flower, the fjords, the northern light.</p>",
             "text_color": "#F7F6F2",
             "width": "fit-content",
             "max_width": "narrow",
