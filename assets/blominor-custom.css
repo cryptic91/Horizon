@@ -373,10 +373,70 @@ cart-icon {
   padding-top: var(--blm-space-3xl);
   padding-bottom: var(--blm-space-xl);
 }
-.footer a { color: var(--blm-parchment); opacity: 0.85; }
-.footer a:hover { opacity: 1; }
+
+/* Wordmark + tagline — footer-group.json has no editable content area
+   for this (and it's an auto-generated section file we don't touch),
+   so it's added via ::before/:first-line. Line 1 = wordmark, line 2 =
+   tagline. :first-line on generated content is supported in current
+   Chrome/Edge/Firefox/Safari 16.4+; older browsers just show both
+   lines in the tagline style below — graceful, not broken. */
+.footer::before {
+  content: "BLÓMINOR\A Nordic Botanical Jewelry";
+  white-space: pre-line;
+  display: block;
+  font-family: var(--blm-font-heading);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--blm-sage);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--blm-space-lg);
+}
+.footer::before:first-line {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blm-parchment);
+}
+
+.footer a { color: var(--blm-sage); opacity: 1; transition: color var(--blm-dur-fast) var(--blm-ease); }
+.footer a:hover { color: var(--blm-parchment); }
+
 .footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6 {
   color: var(--blm-parchment);
+  font-family: var(--blm-font-body) !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+}
+
+/* Newsletter signup */
+.footer .email-signup__input {
+  background: transparent !important;
+  border: 1px solid var(--blm-parchment) !important;
+  color: var(--blm-parchment) !important;
+}
+.footer .email-signup__input::placeholder {
+  color: rgba(247, 246, 242, 0.6);
+}
+.footer .email-signup__button {
+  background: var(--blm-forest-dark) !important;
+  color: var(--blm-parchment) !important;
+}
+
+/* Bottom bar */
+.footer-utilities__text {
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(247, 246, 242, 0.7);
+}
+
+/* Payment icons — subtle, parchment-tinted */
+.payment-icons__list {
+  opacity: 0.7;
+  filter: grayscale(1) brightness(1.4);
 }
 
 /* ------------------------------------------------------------------------
