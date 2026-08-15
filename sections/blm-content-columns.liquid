@@ -1,0 +1,67 @@
+<div class="blm-content-columns" {{ section.shopify_attributes }}>
+  <div class="blm-container">
+    {% if section.settings.heading != blank %}
+      <h2 class="blm-content-columns__heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="blm-content-columns__grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'column' %}
+          <div class="blm-content-columns__col" {{ block.shopify_attributes }}>
+            {% if block.settings.title != blank %}
+              <h3 class="blm-content-columns__col-title">{{ block.settings.title }}</h3>
+            {% endif %}
+            {% if block.settings.content != blank %}
+              <div class="blm-content-columns__col-body rte">{{ block.settings.content }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Content columns",
+  "tag": "section",
+  "class": "blm-content-columns-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section heading (optional)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Column title",
+          "default": "Column title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Column content",
+          "default": "<p>Column content goes here.</p>"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Content columns",
+      "blocks": [
+        { "type": "column" },
+        { "type": "column" }
+      ]
+    }
+  ]
+}
+{% endschema %}
