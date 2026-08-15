@@ -572,4 +572,95 @@ input:focus, textarea:focus, select:focus {
   margin: 0;
 }
 
+/* ------------------------------------------------------------------------
+   17b. Page hero — reusable (sections/blm-page-hero.liquid)
+   ------------------------------------------------------------------------ */
+.blm-page-hero {
+  background: var(--blm-parchment);
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.blm-page-hero__inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blm-page-hero__heading {
+  margin: 0 0 var(--blm-space-md);
+}
+
+.blm-page-hero__subheading {
+  margin: 0 auto;
+  color: var(--blm-muted);
+}
+
+@media (max-width: 768px) {
+  .blm-page-hero {
+    padding-top: 72px;
+    padding-bottom: 56px;
+  }
+}
+
+/* ------------------------------------------------------------------------
+   18. FAQ accordion (sections/blm-faq.liquid)
+   ------------------------------------------------------------------------ */
+.blm-faq {
+  background: var(--blm-parchment);
+  padding-top: var(--blm-space-2xl);
+  padding-bottom: var(--blm-space-3xl);
+}
+
+.blm-faq__inner {
+  max-width: 800px;
+}
+
+.blm-faq__heading {
+  text-align: center;
+  margin-bottom: var(--blm-space-xl);
+}
+
+.blm-faq__list {
+  border-bottom: 1px solid rgba(79, 102, 86, 0.15);
+}
+
+.blm-faq__item {
+  border-top: 1px solid rgba(79, 102, 86, 0.15);
+}
+
+.blm-faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--blm-space-md);
+  padding: 24px 0;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--blm-font-heading);
+  font-size: 1.375rem;
+  font-weight: 400;
+  color: var(--blm-ink);
+}
+.blm-faq__question::-webkit-details-marker { display: none; }
+
+.blm-faq__chevron {
+  flex-shrink: 0;
+  color: var(--blm-forest);
+  transition: transform var(--blm-dur-med) var(--blm-ease);
+}
+.blm-faq__item[open] .blm-faq__chevron {
+  transform: rotate(180deg);
+}
+
+.blm-faq__answer {
+  font-family: var(--blm-font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--blm-muted);
+  padding-bottom: 24px;
+  max-width: 65ch;
+}
+
 /* END OF FILE */
