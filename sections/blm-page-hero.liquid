@@ -1,0 +1,48 @@
+<div class="blm-page-hero" {{ section.shopify_attributes }}>
+  <div class="blm-container blm-page-hero__inner">
+    {% if section.settings.eyebrow != blank %}
+      <span class="blm-eyebrow">{{ section.settings.eyebrow }}</span>
+    {% endif %}
+
+    {% if section.settings.heading != blank %}
+      <h1 class="blm-page-hero__heading">{{ section.settings.heading }}</h1>
+    {% endif %}
+
+    {% if section.settings.subheading != blank %}
+      <p class="blm-page-hero__subheading blm-lead">{{ section.settings.subheading }}</p>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Page hero (simple)",
+  "tag": "section",
+  "class": "blm-page-hero-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Support"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Page title"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "A short lead line under the page title."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page hero (simple)"
+    }
+  ]
+}
+{% endschema %}
