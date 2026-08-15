@@ -40,19 +40,34 @@
     "about_values": {
       "type": "media-with-content",
       "blocks": {
-        "value_1": {
-          "type": "text",
+        "media": {
+          "type": "_media-without-appearance",
+          "static": true,
           "settings": {
-            "text": "<h3>Hand-finished in small batches</h3><p>Every piece is inspected by human hands before it leaves us. No mass production. No shortcuts. Just careful attention to the details that make quiet luxury feel real.</p>"
+            "media_type": "image"
           }
+        },
+        "content": {
+          "type": "_content-without-appearance",
+          "static": true,
+          "settings": {
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 48
+          },
+          "blocks": {
+            "value_1": {
+              "type": "text",
+              "settings": {
+                "text": "<h3>Hand-finished in small batches</h3><p>Every piece is inspected by human hands before it leaves us. No mass production. No shortcuts. Just careful attention to the details that make quiet luxury feel real.</p>"
+              }
+            }
+          },
+          "block_order": ["value_1"]
         }
       },
-      "block_order": ["value_1"],
+      "block_order": ["media", "content"],
       "settings": {
-        "content_direction": "row",
-        "horizontal_alignment": "space-between",
-        "vertical_alignment": "center",
-        "gap": 48,
         "padding-block-start": 64,
         "padding-block-end": 64
       }
