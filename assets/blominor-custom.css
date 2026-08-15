@@ -500,4 +500,76 @@ input:focus, textarea:focus, select:focus {
   font-size: 0.9375rem !important;
 }
 
+/* ------------------------------------------------------------------------
+   17. Product storytelling (sections/blm-product-storytelling.liquid)
+   ------------------------------------------------------------------------ */
+.blm-product-storytelling {
+  padding-top: var(--blm-space-3xl);
+  padding-bottom: var(--blm-space-3xl);
+}
+
+.blm-story-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--blm-space-xl);
+}
+
+@media (min-width: 900px) {
+  .blm-story-grid {
+    grid-template-columns: 1fr 1.4fr;
+    gap: var(--blm-space-2xl);
+    align-items: start;
+  }
+}
+
+.blm-story-grid__intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.blominor-product-description__kicker {
+  margin-bottom: var(--blm-space-md);
+}
+
+.blominor-product-description__heading {
+  font-family: var(--blm-font-heading);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--blm-ink);
+  margin: 0;
+}
+
+.blominor-product-description__text {
+  font-family: var(--blm-font-body);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--blm-ink);
+  margin-bottom: var(--blm-space-lg);
+}
+
+.blominor-product-description__materials,
+.blominor-product-description__symbolism,
+.blominor-product-description__care {
+  margin-top: var(--blm-space-lg);
+  padding-top: var(--blm-space-lg);
+  border-top: 1px solid rgba(79, 102, 86, 0.2); /* thin Forest divider line */
+}
+
+.blominor-product-description h4 {
+  font-family: var(--blm-font-heading);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--blm-ink);
+  margin: 0 0 var(--blm-space-sm);
+}
+
+.blominor-product-description p {
+  font-family: var(--blm-font-body);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--blm-muted);
+  margin: 0;
+}
+
 /* END OF FILE */
