@@ -859,4 +859,55 @@ a.blm-contact__value:hover {
   color: #a13d3d;
 }
 
+/* ------------------------------------------------------------------------
+   22. Mobile refinements
+   Notes: footer already collapses 3-col -> 1-col on mobile natively
+   (Horizon's own .footer-content grid, base is grid-template-columns:
+   1fr before any breakpoint) — only the gap needed bumping. Product
+   cards are already 2-col on mobile via index.json's own
+   "mobile_columns": "2" setting on the product-list section — no CSS
+   needed there, already correct.
+   ------------------------------------------------------------------------ */
+@media (max-width: 768px) {
+  h1, .h0, .h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .section,
+  [class*="section-"],
+  .shopify-section > .section-wrapper {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .blm-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .button,
+  button.button,
+  .shopify-payment-button__button--unbranded {
+    padding: 12px 28px !important;
+  }
+
+  .hero__container {
+    min-height: 480px;
+  }
+
+  .footer-content {
+    gap: 40px;
+  }
+
+  .blm-faq__question {
+    font-size: 1.125rem;
+    padding: 18px 0;
+  }
+
+  .blm-faq__answer {
+    font-size: 0.9375rem;
+    padding-bottom: 18px;
+  }
+}
+
 /* END OF FILE */
