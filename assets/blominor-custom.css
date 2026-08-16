@@ -910,4 +910,117 @@ a.blm-contact__value:hover {
   }
 }
 
+/* ------------------------------------------------------------------------
+   23. Collections (blm-collection-hero.liquid, blm-collection-story.liquid)
+   ------------------------------------------------------------------------ */
+.blm-collection-hero {
+  background: var(--blm-parchment);
+  padding-top: 120px;
+  padding-bottom: 64px;
+  border-bottom: 1px solid rgba(79, 102, 86, 0.15);
+  background-size: cover;
+  background-position: center;
+}
+
+.blm-collection-hero--image {
+  color: var(--blm-parchment);
+  position: relative;
+}
+.blm-collection-hero--image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 62, 108, 0.35);
+}
+.blm-collection-hero--image .blm-collection-hero__inner {
+  position: relative;
+  z-index: 1;
+}
+.blm-collection-hero--image .blm-collection-hero__title,
+.blm-collection-hero--image .blm-collection-hero__count {
+  color: var(--blm-parchment);
+}
+
+.blm-collection-hero__inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blm-collection-hero__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 0 0 var(--blm-space-md);
+}
+
+.blm-collection-hero__description {
+  color: var(--blm-muted);
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+.blm-collection-hero__divider {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--blm-forest);
+  margin: var(--blm-space-lg) 0;
+}
+
+.blm-collection-hero__count {
+  font-family: var(--blm-font-body);
+  font-size: 0.8125rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blm-muted);
+}
+
+/* Product grid — subtle alternate background for visual rhythm against
+   the parchment hero above it. Verified against sections/main-collection.liquid
+   (READ ONLY) — actual wrapper class is .product-grid-container. */
+.product-grid-container {
+  background: var(--blm-parchment-2);
+}
+
+.blm-collection-story {
+  padding-top: var(--blm-space-3xl);
+  padding-bottom: var(--blm-space-3xl);
+}
+
+.blm-collection-story__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--blm-space-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.blm-collection-story--with-image .blm-collection-story__grid {
+  max-width: none;
+}
+
+@media (min-width: 750px) {
+  .blm-collection-story--with-image .blm-collection-story__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--blm-space-2xl);
+  }
+}
+
+.blm-collection-story:not(.blm-collection-story--with-image) .blm-collection-story__content {
+  text-align: center;
+}
+
+.blm-collection-story__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.blm-collection-story__heading {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin: 0 0 var(--blm-space-md);
+}
+
 /* END OF FILE */
