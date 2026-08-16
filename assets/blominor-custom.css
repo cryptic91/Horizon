@@ -1177,4 +1177,86 @@ a.blm-contact__value:hover {
   margin-top: var(--blm-space-sm);
 }
 
+/* ------------------------------------------------------------------------
+   27. Cart drawer
+   Verified real classes by reading snippets/cart-drawer.liquid,
+   snippets/cart-products.liquid, snippets/cart-summary.liquid
+   (READ ONLY — no stock files touched). No free-shipping progress bar
+   exists in this theme build, so that bullet from the task spec is
+   skipped — nothing to style.
+   ------------------------------------------------------------------------ */
+.theme-drawer__dialog.color-custom-drawer {
+  background: var(--blm-parchment) !important;
+}
+
+@media (min-width: 750px) {
+  .theme-drawer__dialog {
+    max-width: 460px;
+  }
+}
+
+.theme-drawer__title {
+  font-family: var(--blm-font-heading) !important;
+  font-weight: 400 !important;
+  font-size: 1.5rem !important;
+}
+
+.theme-drawer__close-button {
+  color: var(--blm-muted);
+}
+
+.cart-items__table-row {
+  border-bottom: 1px solid var(--blm-border);
+}
+
+.cart-items__media-container {
+  border-radius: var(--blm-radius-sm);
+  overflow: hidden;
+}
+
+.cart-items__title {
+  font-family: var(--blm-font-heading) !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+
+.cart-items__variant {
+  font-family: var(--blm-font-body);
+  font-size: 0.8125rem;
+  color: var(--blm-muted);
+}
+
+.cart-totals__total {
+  border-top: 1px solid var(--blm-forest);
+  padding-top: var(--blm-space-md);
+}
+.cart-totals__total-label,
+.cart-totals__total-value {
+  font-family: var(--blm-font-heading) !important;
+  font-size: 1.25rem !important;
+}
+
+.cart__checkout-button {
+  background: var(--blm-forest) !important;
+  color: var(--blm-parchment) !important;
+  width: 100%;
+  padding: 16px !important;
+}
+
+.cart-items__empty-button {
+  color: var(--blm-muted);
+  text-decoration: underline;
+}
+.cart-items__empty-button:hover {
+  color: var(--blm-forest);
+}
+
+.cart-drawer--empty .theme-drawer__title {
+  font-family: var(--blm-font-heading) !important;
+  font-style: italic;
+  font-weight: 400 !important;
+  text-align: center;
+  color: var(--blm-muted);
+}
+
 /* END OF FILE */
