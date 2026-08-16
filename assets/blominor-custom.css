@@ -1269,4 +1269,88 @@ a.blm-contact__value:hover {
   color: var(--blm-muted);
 }
 
+/* ------------------------------------------------------------------------
+   28. Product page
+   Verified real classes by reading (read-only): snippets/product-media-
+   gallery-content.liquid (.media-gallery__grid, .product-media-constraint-
+   wrapper), snippets/variant-main-picker.liquid (.variant-picker),
+   snippets/quantity-selector.liquid (.quantity-selector),
+   blocks/disclosures.liquid (.disclosures*). Horizon's generic "text"/
+   "price" blocks build classes dynamically from type_preset settings
+   rather than fixed semantic class names, so .product-title/.price
+   below are best-effort (same pattern already used since Round 1's
+   product-card CSS, which has synced clean) — flagged as unverified.
+   ------------------------------------------------------------------------ */
+.product-media-constraint-wrapper {
+  border: 1px solid var(--blm-border);
+  border-radius: var(--blm-radius-md);
+  overflow: hidden;
+}
+.product-media-constraint-wrapper img {
+  box-shadow: none !important;
+}
+
+.media-gallery__grid .product-media-constraint-wrapper {
+  transition: border-color var(--blm-dur-fast) var(--blm-ease);
+}
+
+/* Product title / price — best-effort, see note above */
+h1.product-title,
+.product-title {
+  font-family: var(--blm-font-heading) !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.01em;
+}
+
+.price {
+  font-family: var(--blm-font-body) !important;
+  font-weight: 500 !important;
+  font-size: 1.5rem !important;
+  color: var(--blm-ink) !important;
+}
+
+/* Variant picker — pill buttons */
+.variant-picker .variant-option__swatch-value,
+.variant-picker button {
+  border: 1px solid var(--blm-forest) !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  color: var(--blm-forest) !important;
+  font-family: var(--blm-font-body);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.variant-picker [aria-checked="true"],
+.variant-picker .is-selected {
+  background: var(--blm-forest) !important;
+  color: var(--blm-parchment) !important;
+}
+
+/* Quantity selector */
+.quantity-selector {
+  border: 1px solid var(--blm-border);
+  border-radius: var(--blm-radius-sm);
+}
+.quantity-selector button {
+  color: var(--blm-forest);
+}
+
+/* Add to cart — reuses global .button--primary, just ensure full width
+   in the product info column specifically */
+.product-details .button--primary,
+.buy-buttons .button--primary {
+  width: 100%;
+}
+
+/* Disclosures / accordion — match FAQ treatment */
+.disclosures__item {
+  border-top: 1px solid rgba(79, 102, 86, 0.15);
+}
+.disclosures__heading,
+.disclosures__summary-item-title {
+  font-family: var(--blm-font-heading) !important;
+  font-weight: 400 !important;
+}
+
 /* END OF FILE */
