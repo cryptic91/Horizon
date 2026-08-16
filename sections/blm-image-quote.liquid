@@ -1,0 +1,65 @@
+{%- liquid
+  assign bg_url = blank
+  if section.settings.image != blank
+    assign bg_url = section.settings.image | image_url: width: 1800
+  elsif section.settings.image_asset_fallback != blank
+    assign bg_url = section.settings.image_asset_fallback | asset_url
+  endif
+-%}
+<div
+  class="blm-image-quote"
+  {% if bg_url != blank %}
+    style="background-image: url({{ bg_url }});"
+  {% endif %}
+  {{ section.shopify_attributes }}
+>
+  <div class="blm-image-quote__overlay"></div>
+  <div class="blm-container blm-image-quote__inner">
+    <blockquote class="blm-image-quote__quote">
+      <p>{{ section.settings.quote }}</p>
+      {% if section.settings.attribution != blank %}
+        <cite>{{ section.settings.attribution }}</cite>
+      {% endif %}
+    </blockquote>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image with quote",
+  "tag": "section",
+  "class": "blm-image-quote-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image",
+      "info": "Takes priority over the theme-asset fallback below once set."
+    },
+    {
+      "type": "text",
+      "id": "image_asset_fallback",
+      "label": "Fallback image filename (in assets/)",
+      "default": "hero-forest-fog.jpg",
+      "info": "Used only while no image is picked above."
+    },
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Quote",
+      "default": "Between towering mountains and silent fjords, there grows a flower that blooms against all odds."
+    },
+    {
+      "type": "text",
+      "id": "attribution",
+      "label": "Attribution",
+      "default": "— BLÓMINOR"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with quote"
+    }
+  ]
+}
+{% endschema %}
