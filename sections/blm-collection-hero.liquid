@@ -1,0 +1,51 @@
+<div
+  class="blm-collection-hero{% if section.settings.background_image != blank %} blm-collection-hero--image{% endif %}"
+  {% if section.settings.background_image != blank %}
+    style="background-image: url({{ section.settings.background_image | image_url: width: 1800 }});"
+  {% endif %}
+  {{ section.shopify_attributes }}
+>
+  <div class="blm-container blm-collection-hero__inner">
+    {% if section.settings.eyebrow != blank %}
+      <span class="blm-eyebrow">{{ section.settings.eyebrow }}</span>
+    {% endif %}
+
+    <h1 class="blm-collection-hero__title">{{ collection.title }}</h1>
+
+    {% if collection.description != blank %}
+      <div class="blm-collection-hero__description rte">{{ collection.description }}</div>
+    {% endif %}
+
+    <span class="blm-collection-hero__divider" aria-hidden="true"></span>
+
+    <span class="blm-collection-hero__count">
+      {{ collection.products_count }} {% if collection.products_count == 1 %}piece{% else %}pieces{% endif %}
+    </span>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection hero",
+  "tag": "section",
+  "class": "blm-collection-hero-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow (optional override)",
+      "info": "Leave blank to hide. Collection title and description come from the collection itself."
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image (optional)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection hero"
+    }
+  ]
+}
+{% endschema %}
