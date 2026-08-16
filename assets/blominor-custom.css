@@ -439,6 +439,16 @@ cart-icon {
   filter: grayscale(1) brightness(1.4);
 }
 
+/* Fix color seam (Round 2 Task F): footer_utilities_jLGE8U has its own
+   background_color setting (Parchment) rendered via snippets/contrast-override
+   as a scoped .color-custom-{section_id} rule — separate from and
+   inconsistent with the main footer's now-Forest background. Force it
+   to match rather than editing footer-group.json (auto-generated,
+   off-limits). Section id confirmed in footer-group.json. */
+.color-custom-footer_utilities_jLGE8U {
+  background-color: var(--blm-forest) !important;
+}
+
 /* ------------------------------------------------------------------------
    12. Product card refinements (light touch — deeper pass later)
    ------------------------------------------------------------------------ */
