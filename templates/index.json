@@ -353,12 +353,61 @@
         "padding-block-start": 16,
         "padding-block-end": 16
       }
+    },
+    "image_quote_blm": {
+      "type": "blm-image-quote",
+      "settings": {
+        "image_asset_fallback": "hero-forest-fog.jpg",
+        "quote": "Between towering mountains and silent fjords, there grows a flower that blooms against all odds.",
+        "attribution": "— BLÓMINOR"
+      }
+    },
+    "trust_pillars_blm": {
+      "type": "blm-trust-pillars",
+      "blocks": {
+        "pillar_1": {
+          "type": "pillar",
+          "settings": {
+            "icon": "leaf",
+            "title": "Thoughtful Design",
+            "body": "Every piece is crafted with care."
+          }
+        },
+        "pillar_2": {
+          "type": "pillar",
+          "settings": {
+            "icon": "flower",
+            "title": "Inspired by Nature",
+            "body": "Delicate blooms. Endless elegance."
+          }
+        },
+        "pillar_3": {
+          "type": "pillar",
+          "settings": {
+            "icon": "gem",
+            "title": "Everyday Luxury",
+            "body": "Jewelry to celebrate your everyday."
+          }
+        }
+      },
+      "block_order": ["pillar_1", "pillar_2", "pillar_3"],
+      "settings": {}
+    },
+    "newsletter_blm": {
+      "type": "blm-newsletter",
+      "settings": {
+        "heading": "Stay in touch",
+        "body": "Occasional letters. New pieces, quiet stories, no noise."
+      }
     }
   },
   "order": [
     "hero_jVaWmY",
     "blominor_story_section",
     "product_list_fa6P9H",
+    "image_quote_blm",
+    "trust_pillars_blm",
+    "newsletter_blm",
     "trust_marquee_section"
   ]
 }
