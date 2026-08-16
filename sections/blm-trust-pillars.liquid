@@ -1,0 +1,94 @@
+<div class="blm-trust-pillars" {{ section.shopify_attributes }}>
+  <div class="blm-container blm-trust-pillars__grid">
+    {% for block in section.blocks %}
+      {% if block.type == 'pillar' %}
+        <div class="blm-trust-pillars__item" {{ block.shopify_attributes }}>
+          <span class="blm-trust-pillars__icon">
+            {% case block.settings.icon %}
+              {% when 'leaf' %}
+                {% render 'blm-icon-leaf' %}
+              {% when 'flower' %}
+                {% render 'blm-icon-flower' %}
+              {% when 'gem' %}
+                {% render 'blm-icon-gem' %}
+            {% endcase %}
+          </span>
+          <h3 class="blm-trust-pillars__title">{{ block.settings.title }}</h3>
+          <p class="blm-trust-pillars__body">{{ block.settings.body }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Trust pillars",
+  "tag": "section",
+  "class": "blm-trust-pillars-section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "pillar",
+      "name": "Pillar",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "leaf", "label": "Leaf" },
+            { "value": "flower", "label": "Flower" },
+            { "value": "gem", "label": "Gem" }
+          ],
+          "default": "leaf"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Thoughtful Design"
+        },
+        {
+          "type": "text",
+          "id": "body",
+          "label": "Body",
+          "default": "Every piece is crafted with care."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Trust pillars",
+      "blocks": [
+        {
+          "type": "pillar",
+          "settings": {
+            "icon": "leaf",
+            "title": "Thoughtful Design",
+            "body": "Every piece is crafted with care."
+          }
+        },
+        {
+          "type": "pillar",
+          "settings": {
+            "icon": "flower",
+            "title": "Inspired by Nature",
+            "body": "Delicate blooms. Endless elegance."
+          }
+        },
+        {
+          "type": "pillar",
+          "settings": {
+            "icon": "gem",
+            "title": "Everyday Luxury",
+            "body": "Jewelry to celebrate your everyday."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
