@@ -15,11 +15,11 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<h1>Page not found</h1>",
+            "text": "<h1>404</h1>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
-            "type_preset": "h3",
+            "type_preset": "h1",
             "font": "var(--font-body--family)",
             "line_height": "normal",
             "letter_spacing": "normal",
@@ -39,7 +39,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>The link may be incorrect, or the page has been removed. </p>",
+            "text": "<p>This page has wandered off the trail.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -63,8 +63,8 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Continue shopping",
-            "link": "shopify://collections/all",
+            "label": "Back to homepage",
+            "link": "/",
             "open_in_new_tab": false,
             "style_class": "button",
             "width": "fit-content",
