@@ -4,6 +4,8 @@
       <h2 class="blm-faq__heading">{{ section.settings.heading }}</h2>
     {% endif %}
 
+    {% render 'blm-divider-flourish' %}
+
     <div class="blm-faq__list">
       {% for block in section.blocks %}
         {% if block.type == 'faq_item' %}

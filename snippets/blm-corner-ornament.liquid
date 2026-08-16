@@ -1,0 +1,23 @@
+{%- doc -%}
+  Subtle decorative SVG flourish for a card or hero corner. Requires a
+  `position: relative` parent — this snippet positions itself absolute.
+
+  @param {string} [corner] - 'top-left' (default), 'top-right', 'bottom-left', 'bottom-right'
+
+  @example
+  <div style="position: relative;">
+    {% render 'blm-corner-ornament', corner: 'top-left' %}
+  </div>
+{%- enddoc -%}
+{%- liquid
+  assign corner = corner | default: 'top-left'
+-%}
+<svg
+  class="blm-corner-ornament blm-corner-ornament--{{ corner }}"
+  width="32" height="32" viewBox="0 0 32 32" fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role="presentation" aria-hidden="true"
+>
+  <path d="M2 20C2 10 10 2 20 2" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+  <circle cx="6" cy="6" r="1.5" stroke="currentColor" stroke-width="1"/>
+</svg>

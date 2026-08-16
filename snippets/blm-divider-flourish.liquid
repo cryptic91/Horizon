@@ -1,0 +1,19 @@
+{%- doc -%}
+  Small horizontal divider: two thin lines flanking a minimal 5-petal
+  flower mark. Use between editorial content blocks — e.g. under a page
+  h1, between FAQ groups, above the footer newsletter signup.
+
+  @example
+  {% render 'blm-divider-flourish' %}
+{%- enddoc -%}
+<div class="blm-divider-flourish" role="presentation" aria-hidden="true">
+  <span class="blm-divider-flourish__line"></span>
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="8" cy="8" r="1.25" fill="currentColor"/>
+    <path d="M8 6.25C8 4.5 7.25 3.25 6.5 2.5C7.75 2.25 8.75 3 9 4.25" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+    <path d="M9.75 8C11.5 8 12.75 7.25 13.5 6.5C13.75 7.75 13 8.75 11.75 9" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+    <path d="M8 9.75C8 11.5 8.75 12.75 9.5 13.5C8.25 13.75 7.25 13 7 11.75" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+    <path d="M6.25 8C4.5 8 3.25 8.75 2.5 9.5C2.25 8.25 3 7.25 4.25 7" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+  </svg>
+  <span class="blm-divider-flourish__line"></span>
+</div>

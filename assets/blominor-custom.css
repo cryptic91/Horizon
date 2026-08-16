@@ -1510,4 +1510,41 @@ h1.product-title,
   }
 }
 
+/* ------------------------------------------------------------------------
+   32. Decorative (blm-divider-flourish.liquid, blm-corner-ornament.liquid)
+   ------------------------------------------------------------------------ */
+.blm-divider-flourish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--blm-space-sm);
+  width: 40px;
+  height: 24px;
+  margin: var(--blm-space-xl) auto;
+  color: var(--blm-forest);
+}
+.blm-divider-flourish__line {
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.4;
+}
+
+.blm-divider-section {
+  display: flex;
+  justify-content: center;
+  padding: var(--blm-space-lg) 0;
+}
+
+.blm-corner-ornament {
+  position: absolute;
+  color: var(--blm-forest);
+  opacity: 0.3;
+  pointer-events: none;
+}
+.blm-corner-ornament--top-left { top: 8px; left: 8px; }
+.blm-corner-ornament--top-right { top: 8px; right: 8px; transform: scaleX(-1); }
+.blm-corner-ornament--bottom-left { bottom: 8px; left: 8px; transform: scaleY(-1); }
+.blm-corner-ornament--bottom-right { bottom: 8px; right: 8px; transform: scale(-1, -1); }
+
 /* END OF FILE */

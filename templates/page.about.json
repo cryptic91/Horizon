@@ -25,6 +25,10 @@
         "vertical_alignment_flex_direction_column": "center"
       }
     },
+    "about_divider_blm": {
+      "type": "blm-divider",
+      "settings": {}
+    },
     "about_story": {
       "type": "blominor-story",
       "settings": {
@@ -110,6 +114,7 @@
   },
   "order": [
     "about_hero",
+    "about_divider_blm",
     "about_story",
     "about_values",
     "about_cta"
