@@ -1484,4 +1484,30 @@ h1.product-title,
   }
 }
 
+/* ------------------------------------------------------------------------
+   31. Accessibility
+   ------------------------------------------------------------------------ */
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--blm-forest);
+  outline-offset: 2px;
+}
+
+/* Verified real class from snippets/skip-to-content-link.liquid (read only) */
+.skip-to-content-link {
+  background: var(--blm-forest);
+  color: var(--blm-parchment);
+}
+
+/* Belt-and-braces reduced-motion guard for anything in this file that
+   uses transition/transform outside an explicit @media gate already
+   (buttons, links, product-card image hover, footer links). Scroll-fade
+   in blominor-story.liquid already has its own gate at the source. */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* END OF FILE */
