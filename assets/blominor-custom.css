@@ -1374,4 +1374,114 @@ h1.product-title,
   width: 100%;
 }
 
+/* ------------------------------------------------------------------------
+   30. Mobile deep pass (Round 2)
+   Builds on section 22 rather than replacing it. Header nav already
+   collapses to Horizon's own hamburger drawer natively — just resizing
+   the logo here, not touching the collapse mechanism itself.
+   ------------------------------------------------------------------------ */
+@media (max-width: 768px) {
+  .hero__container {
+    min-height: 560px;
+  }
+  .hero__content-wrapper h1,
+  .hero__content-wrapper .h1 {
+    font-size: clamp(2.5rem, 8vw, 3.5rem) !important;
+  }
+  .hero__content-wrapper .button--primary,
+  .hero__content-wrapper .button-custom {
+    width: 100%;
+    padding: 12px 24px !important;
+  }
+
+  .blominor-story__grid {
+    grid-template-columns: 1fr !important;
+  }
+  .blominor-story__image,
+  .blominor-story__placeholder {
+    aspect-ratio: 3 / 4 !important;
+  }
+
+  .product-grid-container .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .product-card__title,
+  .product-item__title,
+  .card__heading,
+  .product-title {
+    font-size: 1rem !important;
+  }
+  .product-card__price,
+  .product-item__price {
+    font-size: 0.95rem !important;
+  }
+
+  .blm-trust-pillars__grid {
+    gap: 40px;
+  }
+
+  .blm-newsletter__row {
+    flex-direction: column;
+  }
+  .blm-newsletter__row input[type="email"],
+  .blm-newsletter__row button {
+    width: 100%;
+  }
+
+  .blm-image-quote {
+    min-height: 380px;
+    background-attachment: scroll; /* parallax breaks on iOS — desktop only */
+  }
+  .blm-image-quote__quote p {
+    font-size: 1.25rem;
+  }
+
+  .blm-faq__question {
+    font-size: 1rem;
+  }
+  .blm-faq__answer {
+    font-size: 0.95rem;
+  }
+
+  .blm-contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media-gallery__grid {
+    margin-bottom: var(--blm-space-lg);
+  }
+  .disclosures__container {
+    width: 100%;
+  }
+
+  .theme-drawer__dialog {
+    max-width: 100%;
+  }
+  .cart-items__table-row {
+    padding-block: var(--blm-space-md);
+  }
+  .quantity-selector button {
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .header-logo,
+  a.header-logo {
+    font-size: 1.25rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .blm-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .section,
+  [class*="section-"],
+  .shopify-section > .section-wrapper {
+    padding-top: 45px; /* ~80% of the 56px mobile baseline from section 7 */
+    padding-bottom: 45px;
+  }
+}
+
 /* END OF FILE */
