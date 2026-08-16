@@ -1353,4 +1353,25 @@ h1.product-title,
   font-weight: 400 !important;
 }
 
+/* ------------------------------------------------------------------------
+   29. Utility pages (search, 404, password)
+   Verified: sections/password.liquid schema has a unique "section-password"
+   class — used below. sections/main-404.liquid only has the generic
+   "section-wrapper" class (shared, not page-specific — left alone rather
+   than risk affecting other pages). search-header.liquid / search-results.liquid
+   have no distinguishing class at all — their headings/body/buttons render
+   through the same shared "text"/"button" block system as everywhere else,
+   so they already inherit the global Cormorant h1 / Forest button styling
+   from sections 1 and 5. Copy for 404 and password was updated directly in
+   their template JSON (schema-editable, no stock .liquid touched); search
+   page copy is unchanged since there was nothing to safely target.
+   ------------------------------------------------------------------------ */
+.section-password {
+  background: var(--blm-parchment);
+  text-align: center;
+}
+.section-password .button {
+  width: 100%;
+}
+
 /* END OF FILE */
