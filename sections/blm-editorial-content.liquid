@@ -1,0 +1,44 @@
+<div class="blm-editorial-content" {{ section.shopify_attributes }}>
+  <div class="blm-container blm-editorial-content__inner">
+    {% if section.settings.eyebrow != blank %}
+      <span class="blm-eyebrow">{{ section.settings.eyebrow }}</span>
+    {% endif %}
+    {% if section.settings.heading != blank %}
+      <h2 class="blm-editorial-content__heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+    {% if section.settings.body != blank %}
+      <div class="blm-editorial-content__body rte">{{ section.settings.body }}</div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Editorial content",
+  "tag": "section",
+  "class": "blm-editorial-content-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow (optional)"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading (optional)"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "default": "<p>Longform prose goes here.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Editorial content"
+    }
+  ]
+}
+{% endschema %}
