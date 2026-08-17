@@ -1,0 +1,169 @@
+{
+  "sections": {
+    "size_guide_hero": {
+      "type": "blm-page-hero",
+      "settings": {
+        "eyebrow": "How to Measure",
+        "heading": "Size Guide",
+        "subheading": "Simple guidance for finding your BLÓMINOR fit."
+      }
+    },
+    "ring_size_table_blm": {
+      "type": "blm-size-table",
+      "blocks": {
+        "row_1": {
+          "type": "size_row",
+          "settings": {
+            "name": "Small",
+            "col_1": "52",
+            "col_2": "6",
+            "col_3": "16.6 mm",
+            "status": "available"
+          }
+        },
+        "row_2": {
+          "type": "size_row",
+          "settings": {
+            "name": "Medium",
+            "col_1": "54",
+            "col_2": "7",
+            "col_3": "17.2 mm",
+            "status": "available"
+          }
+        },
+        "row_3": {
+          "type": "size_row",
+          "settings": {
+            "name": "Large",
+            "col_1": "56",
+            "col_2": "7.5",
+            "col_3": "17.8 mm",
+            "status": "available"
+          }
+        }
+      },
+      "block_order": ["row_1", "row_2", "row_3"],
+      "settings": {
+        "eyebrow": "Rings",
+        "heading": "Ring Sizes",
+        "intro": "<p>The inner diameter is measured straight across the widest inside part of a ring. Compare this measurement with a ring that already fits you well.</p>",
+        "col_1_label": "Size",
+        "col_2_label": "EU",
+        "col_3_label": "US (approx.)",
+        "col_4_label": "Inner diameter"
+      }
+    },
+    "ring_measuring_blm": {
+      "type": "blm-measuring-instructions",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "text": "Find a ring that fits the finger you want to size."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "text": "Measure straight across the widest inside part of the ring — this is the inner diameter."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "text": "Compare this measurement to the Ring Sizes table above."
+          }
+        }
+      },
+      "block_order": ["step_1", "step_2", "step_3"],
+      "settings": {
+        "heading": "How to Measure Your Ring Size"
+      }
+    },
+    "bracelet_size_table_blm": {
+      "type": "blm-size-table",
+      "blocks": {
+        "row_1": {
+          "type": "size_row",
+          "settings": {
+            "name": "Small",
+            "col_1": "55 × 60 mm",
+            "col_2": "180 mm",
+            "col_3": "Confirmed sample size",
+            "status": "confirmed"
+          }
+        },
+        "row_2": {
+          "type": "size_row",
+          "settings": {
+            "name": "Medium",
+            "col_1": "To be confirmed",
+            "col_2": "To be confirmed",
+            "col_3": "Awaiting manufacturer",
+            "status": "pending"
+          }
+        },
+        "row_3": {
+          "type": "size_row",
+          "settings": {
+            "name": "Large",
+            "col_1": "To be confirmed",
+            "col_2": "To be confirmed",
+            "col_3": "Awaiting manufacturer",
+            "status": "pending"
+          }
+        }
+      },
+      "block_order": ["row_1", "row_2", "row_3"],
+      "settings": {
+        "eyebrow": "Blómvinr Bracelet",
+        "heading": "Bracelet Sizes",
+        "intro": "<p>The Blómvinr Bracelet has an oval inner shape. Measure around your wrist. The bracelet opens with a clasp — it must not be pushed over the hand.</p>",
+        "col_1_label": "Size",
+        "col_2_label": "Inner dimensions",
+        "col_3_label": "Inner circumference",
+        "col_4_label": "Status"
+      }
+    },
+    "bracelet_measuring_blm": {
+      "type": "blm-measuring-instructions",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "text": "Use a soft measuring tape or a strip of paper."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "text": "Wrap it snugly around the widest part of your wrist, just above the wrist bone."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "text": "Note the measurement in millimetres and compare to the Bracelet Sizes table above."
+          }
+        },
+        "step_4": {
+          "type": "step",
+          "settings": {
+            "text": "Remember: the bracelet opens with a clasp. Never push it over your hand."
+          }
+        }
+      },
+      "block_order": ["step_1", "step_2", "step_3", "step_4"],
+      "settings": {
+        "heading": "How to Measure Your Wrist"
+      }
+    }
+  },
+  "order": [
+    "size_guide_hero",
+    "ring_size_table_blm",
+    "ring_measuring_blm",
+    "bracelet_size_table_blm",
+    "bracelet_measuring_blm"
+  ]
+}
