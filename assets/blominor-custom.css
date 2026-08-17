@@ -1930,4 +1930,18 @@ li a {
   font-style: italic;
 }
 
+/* ------------------------------------------------------------------------
+   39. Draft price notice (snippets/blm-draft-price-notice.liquid)
+   L1/L2 (currency = NOK, no-decimal formatting) are Shopify admin/
+   store-currency defaults, not something theme CSS or code controls —
+   logged for Rakib in NIGHT-LOG-3.md instead of guessed at here.
+   ------------------------------------------------------------------------ */
+.blm-draft-price-notice {
+  font-family: var(--blm-font-heading);
+  font-style: italic;
+  font-size: 0.875rem;
+  color: var(--blm-muted);
+  margin: 4px 0 0;
+}
+
 /* END OF FILE */
