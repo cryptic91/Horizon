@@ -770,6 +770,14 @@ input:focus, textarea:focus, select:focus {
   color: var(--blm-muted);
 }
 
+.blm-content-columns__cta-row {
+  display: flex;
+  gap: var(--blm-space-md);
+  justify-content: center;
+  margin-top: var(--blm-space-2xl);
+  flex-wrap: wrap;
+}
+
 /* ------------------------------------------------------------------------
    20. Contact (sections/blm-contact-info.liquid)
    ------------------------------------------------------------------------ */

@@ -14,40 +14,39 @@
         "col_1": {
           "type": "column",
           "settings": {
-            "title": "Shipping worldwide",
-            "content": "<p>We ship across the EU and internationally, each order packed with the same quiet care regardless of distance.</p>"
+            "title": "International Shipping",
+            "content": "<p>BLÓMINOR ships internationally. All orders include tracking. Free shipping on orders over NOK 4,000. For orders below NOK 4,000, shipping cost is shown at checkout.</p>"
           }
         },
         "col_2": {
           "type": "column",
           "settings": {
-            "title": "Delivery times",
-            "content": "<p>5–7 days within the EU. 10–14 days for the rest of the world. Tracking is sent the moment your order leaves us.</p>"
+            "title": "Taxes & Duties",
+            "content": "<p>International orders may have local taxes or import fees. These are shown at checkout when possible, or may be collected on delivery depending on your country's customs regulations.</p>"
           }
         },
         "col_3": {
           "type": "column",
           "settings": {
-            "title": "Returns",
-            "content": "<p>30 days to decide. If something isn't right, return it to us in its original condition for a full refund.</p>"
+            "title": "Free Returns",
+            "content": "<p>We offer free returns within 14 days of receiving your order. To start a return, complete the return form on our website. We will email prepaid return instructions and a return label.</p>"
           }
         },
         "col_4": {
           "type": "column",
           "settings": {
-            "title": "Exchanges",
-            "content": "<p>Free exchanges within 30 days. Write to us and we'll take care of the rest.</p>"
+            "title": "Return Conditions",
+            "content": "<p>Jewellery must be unworn, undamaged and returned in its original packaging. All tags, protective materials and items included with the order must be returned. Once received and checked, we refund to the original payment method.</p>"
           }
         }
       },
-      "block_order": [
-        "col_1",
-        "col_2",
-        "col_3",
-        "col_4"
-      ],
+      "block_order": ["col_1", "col_2", "col_3", "col_4"],
       "settings": {
-        "heading": ""
+        "heading": "",
+        "cta_1_label": "Start a Return",
+        "cta_1_url": "/pages/returns",
+        "cta_2_label": "Contact Us",
+        "cta_2_url": "/pages/contact"
       }
     }
   },

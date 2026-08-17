@@ -21,6 +21,17 @@
         {% endif %}
       {% endfor %}
     </div>
+
+    {% if section.settings.cta_1_label != blank or section.settings.cta_2_label != blank %}
+      <div class="blm-content-columns__cta-row">
+        {% if section.settings.cta_1_label != blank %}
+          <a href="{{ section.settings.cta_1_url }}" class="button button--primary">{{ section.settings.cta_1_label }}</a>
+        {% endif %}
+        {% if section.settings.cta_2_label != blank %}
+          <a href="{{ section.settings.cta_2_url }}" class="button button--secondary">{{ section.settings.cta_2_label }}</a>
+        {% endif %}
+      </div>
+    {% endif %}
   </div>
 </div>
 
@@ -34,6 +45,30 @@
       "type": "text",
       "id": "heading",
       "label": "Section heading (optional)"
+    },
+    {
+      "type": "header",
+      "content": "Optional CTA row (below columns)"
+    },
+    {
+      "type": "text",
+      "id": "cta_1_label",
+      "label": "Primary CTA label (optional)"
+    },
+    {
+      "type": "url",
+      "id": "cta_1_url",
+      "label": "Primary CTA link"
+    },
+    {
+      "type": "text",
+      "id": "cta_2_label",
+      "label": "Secondary CTA label (optional)"
+    },
+    {
+      "type": "url",
+      "id": "cta_2_url",
+      "label": "Secondary CTA link"
     }
   ],
   "blocks": [
