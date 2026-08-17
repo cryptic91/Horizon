@@ -14,57 +14,71 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Where is Blóminor made?",
-            "answer": "<p>Every piece begins and ends in Norway, hand-finished in small batches rather than made to scale.</p>"
+            "question": "What is BLÓMINOR?",
+            "answer": "<p>BLÓMINOR is a Norwegian jewellery brand inspired by Nordic wildflowers, forests, fjords and the changing northern light. Each piece brings together colour, softness and botanical details, designed for everyday moments and special occasions.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "What materials do you use?",
-            "answer": "<p>We work in recycled sterling silver and gold vermeil, chosen for how quietly they wear over time.</p>"
+            "question": "What does hverdagsglede mean?",
+            "answer": "<p>Hverdagsglede is a Norwegian word for finding joy in the little things that make an ordinary day feel special. At BLÓMINOR, we believe jewellery can be worn simply because it brings happiness — not saved only for milestones.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "How do I care for my jewellery?",
-            "answer": "<p>Keep each piece dry and out of direct sun. A soft cloth, gently used, is all it should ever need.</p>"
+            "question": "What does pre-order mean?",
+            "answer": "<p>Pre-order allows you to reserve a BLÓMINOR piece before the official launch and production run. Full payment is taken when the pre-order is placed, and your piece is shipped once production is complete. Expected delivery time is shown before you complete your order.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "question": "Do you offer engraving?",
-            "answer": "<p>Yes — a small mark, a date, an initial. Add your note at checkout and we'll carry it carefully.</p>"
+            "question": "Where is BLÓMINOR made?",
+            "answer": "<p>BLÓMINOR is designed in Norway. Each piece is crafted with care using rhodium-plated 925 sterling silver and thoughtful botanical details.</p>"
           }
         },
         "faq_5": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the Bergfrue flower?",
-            "answer": "<p>The Bergfrue grows in quiet, rugged places, shaped by wind and snow. It is our first symbol — resilience without noise.</p>"
+            "question": "How do I know my ring or bracelet size?",
+            "answer": "<p>We provide a Standard Size Guide accessible from every product page. For rings, measure the inner diameter of a ring that already fits you well. For the Blómvinr Bracelet, measure around your wrist — the bracelet has an oval inner shape and opens with a clasp.</p>"
           }
         },
         "faq_6": {
           "type": "faq_item",
           "settings": {
-            "question": "How long does shipping take?",
-            "answer": "<p>5–7 days within the EU, 10–14 days further afield. Each order moves at its own unhurried pace.</p>"
+            "question": "How should I care for my BLÓMINOR jewellery?",
+            "answer": "<p>Put jewellery on after perfume, creams and makeup. Remove before showering, swimming, exercising or sleeping. After wearing, gently wipe with a soft, dry, lint-free cloth. Store each piece separately in its original BLÓMINOR box or pouch. Full care instructions are available on our Jewellery Care page.</p>"
           }
         },
         "faq_7": {
           "type": "faq_item",
           "settings": {
-            "question": "What is your return policy?",
-            "answer": "<p>30 days to be certain. If a piece doesn't feel right, return it and we'll make it easy.</p>"
+            "question": "Do you ship internationally?",
+            "answer": "<p>Yes, BLÓMINOR ships internationally. Shipping is free on orders over NOK 4,000. For orders below NOK 4,000, shipping cost is shown at checkout. All orders include tracking. International orders may have local taxes or import fees, shown at checkout when possible.</p>"
           }
         },
         "faq_8": {
           "type": "faq_item",
           "settings": {
-            "question": "Is the packaging sustainable?",
-            "answer": "<p>FSC-certified paper, soy-based inks, no plastic. Made to be kept, reused, or gently returned to the earth.</p>"
+            "question": "What is your return policy?",
+            "answer": "<p>We offer free returns within 14 days of receiving your order. Jewellery must be unworn, undamaged and returned in its original packaging with all tags and materials. To start a return, complete the return form on our website — we will send prepaid return instructions by email.</p>"
+          }
+        },
+        "faq_9": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What if my jewellery arrives damaged?",
+            "answer": "<p>If your jewellery arrives damaged or you receive the wrong item, please contact us at kontakt@blominor.no as soon as possible. We will make it right.</p>"
+          }
+        },
+        "faq_10": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I cancel or change my pre-order?",
+            "answer": "<p>Pre-orders can be cancelled or changed before production begins. Please contact us at kontakt@blominor.no with your order number as soon as possible.</p>"
           }
         }
       },
@@ -76,7 +90,9 @@
         "faq_5",
         "faq_6",
         "faq_7",
-        "faq_8"
+        "faq_8",
+        "faq_9",
+        "faq_10"
       ],
       "settings": {
         "heading": "Frequently Asked"
