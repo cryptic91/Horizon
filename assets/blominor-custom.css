@@ -1510,6 +1510,36 @@ h1.product-title,
   }
 }
 
+/* Round 3 Task A1 — Rakib's resolved decision on the font-size floor
+   flagged in Round 2 Task J: 14px minimum applies to BODY COPY only
+   (paragraphs, list items, links inside body text). Eyebrow labels
+   stay exempt — small-caps/uppercase + letter-spacing + Forest color
+   is a deliberate decorative device that still meets WCAG contrast at
+   12-13px, it's not a body-reading-comfort case. visually-hidden,
+   legal fine print, and breadcrumbs are also exempt (never meant to be
+   comfortably-sized body reading anyway). */
+p,
+li,
+.rte p,
+.rte li,
+p a,
+li a {
+  font-size: max(14px, 1em);
+}
+
+.blm-eyebrow,
+.visually-hidden,
+.blm-legal,
+.breadcrumb,
+.breadcrumbs,
+.blm-eyebrow *,
+.visually-hidden *,
+.blm-legal *,
+.breadcrumb *,
+.breadcrumbs * {
+  font-size: revert;
+}
+
 /* ------------------------------------------------------------------------
    32. Decorative (blm-divider-flourish.liquid, blm-corner-ornament.liquid)
    ------------------------------------------------------------------------ */
