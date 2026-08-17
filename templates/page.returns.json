@@ -1,0 +1,34 @@
+{
+  "sections": {
+    "returns_hero": {
+      "type": "blm-page-hero",
+      "settings": {
+        "eyebrow": "Returns",
+        "heading": "Start a Return",
+        "subheading": "We offer free returns within 14 days."
+      }
+    },
+    "returns_form_blm": {
+      "type": "blm-return-form",
+      "settings": {
+        "heading": "Return details",
+        "intro": "Tell us a little about your order and we'll be in touch with return instructions.",
+        "submit_label": "Request Return Label",
+        "success_message": "Thank you — we've received your return request and will be in touch within 24 hours."
+      }
+    },
+    "returns_next_steps_blm": {
+      "type": "blm-editorial-content",
+      "settings": {
+        "eyebrow": "",
+        "heading": "What Happens Next",
+        "body": "<p>Once we receive your return request, we will send simple return instructions and a prepaid return label by email within 24 hours. Please return the jewellery unworn, undamaged and in its original packaging with all tags and materials. Once we receive and check the return, we will refund the original payment method and confirm by email.</p>"
+      }
+    }
+  },
+  "order": [
+    "returns_hero",
+    "returns_form_blm",
+    "returns_next_steps_blm"
+  ]
+}
