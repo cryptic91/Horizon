@@ -1,0 +1,12 @@
+{%- doc -%}
+  Renders a small "draft price" notice if the given product has the
+  "draft-price" tag. Used while launch prices are still unconfirmed.
+
+  @param {object} product
+
+  @example
+  {% render 'blm-draft-price-notice', product: product %}
+{%- enddoc -%}
+{%- if product.tags contains 'draft-price' -%}
+  <p class="blm-draft-price-notice">Draft price — subject to confirmation</p>
+{%- endif -%}

@@ -1,10 +1,13 @@
-{% if section.settings.enabled %}
+{% if section.settings.enabled or product.tags contains 'draft-price' %}
   <div class="blm-product-preorder-banner" {{ section.shopify_attributes }}>
     <div class="blm-container">
-      {% render 'blm-preorder-notice',
-        delivery_estimate: section.settings.delivery_estimate,
-        message_override: section.settings.message_override
-      %}
+      {% if section.settings.enabled %}
+        {% render 'blm-preorder-notice',
+          delivery_estimate: section.settings.delivery_estimate,
+          message_override: section.settings.message_override
+        %}
+      {% endif %}
+      {% render 'blm-draft-price-notice', product: product %}
     </div>
   </div>
 {% endif %}
