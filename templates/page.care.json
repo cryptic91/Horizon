@@ -1,0 +1,98 @@
+{
+  "sections": {
+    "care_hero": {
+      "type": "blm-page-hero",
+      "settings": {
+        "eyebrow": "How to Care",
+        "heading": "Jewellery Care",
+        "subheading": "A little extra care will keep your BLÓMINOR jewellery beautiful for longer."
+      }
+    },
+    "care_list_blm": {
+      "type": "blm-care-list",
+      "blocks": {
+        "item_1": {
+          "type": "care_item",
+          "settings": {
+            "icon": "leaf",
+            "text": "Put jewellery on after perfume, creams, makeup and hairspray"
+          }
+        },
+        "item_2": {
+          "type": "care_item",
+          "settings": {
+            "icon": "leaf",
+            "text": "Keep jewellery away from chemicals, hand sanitiser and cleaning products"
+          }
+        },
+        "item_3": {
+          "type": "care_item",
+          "settings": {
+            "icon": "leaf",
+            "text": "Remove jewellery before showering, swimming, exercising, sleeping or doing household work"
+          }
+        },
+        "item_4": {
+          "type": "care_item",
+          "settings": {
+            "icon": "flower",
+            "text": "After wearing, gently wipe with a soft, dry and lint-free cloth"
+          }
+        },
+        "item_5": {
+          "type": "care_item",
+          "settings": {
+            "icon": "flower",
+            "text": "Do not use silver dip, strong jewellery cleaners, polishing paste or rough cloths"
+          }
+        },
+        "item_6": {
+          "type": "care_item",
+          "settings": {
+            "icon": "gem",
+            "text": "Do not use an ultrasonic or steam cleaner"
+          }
+        },
+        "item_7": {
+          "type": "care_item",
+          "settings": {
+            "icon": "gem",
+            "text": "Store each piece separately in its original BLÓMINOR box or pouch, in a cool and dry place away from sunlight and humidity"
+          }
+        }
+      },
+      "block_order": ["item_1", "item_2", "item_3", "item_4", "item_5", "item_6", "item_7"],
+      "settings": {
+        "heading": "General Care"
+      }
+    },
+    "care_columns_blm": {
+      "type": "blm-content-columns",
+      "blocks": {
+        "col_1": {
+          "type": "column",
+          "settings": {
+            "title": "Opening & Closing",
+            "content": "<p>Do not push or slide the bracelet over the hand. Always open the clasp before placing it around the wrist. Close the clasp gently and make sure it is secure. If the bracelet has an additional safety lock, fasten this as well.</p>"
+          }
+        },
+        "col_2": {
+          "type": "column",
+          "settings": {
+            "title": "Handle with Care",
+            "content": "<p>Do not pull, bend or force the bracelet open — this may change its shape and damage the clasp or locking mechanism. Handle enamel flowers, pearls, stones and raised details with care.</p>"
+          }
+        }
+      },
+      "block_order": ["col_1", "col_2"],
+      "settings": {
+        "heading": "Blómvinr Bracelet"
+      }
+    }
+  },
+  "order": [
+    "care_hero",
+    "care_list_blm",
+    "care_columns_blm"
+  ]
+}
