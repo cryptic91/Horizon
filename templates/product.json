@@ -298,12 +298,39 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "size_guide_link_blm": {
+              "type": "text",
+              "name": "Size guide link",
+              "settings": {
+                "text": "<p><a href=\"/pages/size-guide\">View Size Guide</a></p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.875rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 8,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "group_icgrde",
             "divider_VJhene",
             "variant_picker_R3rGDr",
+            "size_guide_link_blm",
             "buy_buttons_eYQEYi",
             "text_aEtTtq"
           ]
