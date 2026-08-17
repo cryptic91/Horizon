@@ -1624,4 +1624,59 @@ li a {
   margin-bottom: 0;
 }
 
+/* ------------------------------------------------------------------------
+   34. Care list (sections/blm-care-list.liquid)
+   ------------------------------------------------------------------------ */
+.blm-care-list {
+  padding-top: var(--blm-space-3xl);
+  padding-bottom: var(--blm-space-3xl);
+}
+
+.blm-care-list__heading {
+  text-align: center;
+  margin-bottom: var(--blm-space-xl);
+}
+
+.blm-care-list__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--blm-space-lg) var(--blm-space-2xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 750px) {
+  .blm-care-list__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.blm-care-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--blm-space-md);
+}
+
+.blm-care-list__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--blm-forest);
+  margin-top: 2px;
+}
+.blm-care-list__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.blm-care-list__text {
+  font-family: var(--blm-font-body);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--blm-ink);
+}
+
 /* END OF FILE */
