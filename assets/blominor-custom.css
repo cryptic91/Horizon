@@ -1,5 +1,5 @@
 /* ========================================================================
-   BLÓMINOR NORWAY — Custom Design System
+   BLÓMINOR — Custom Design System
    Non-destructive overrides layered on top of Horizon base styles.
    Load order: base.css → horizon components → THIS FILE (must load last).
    ======================================================================== */
@@ -380,24 +380,19 @@ cart-icon {
    tagline. :first-line on generated content is supported in current
    Chrome/Edge/Firefox/Safari 16.4+; older browsers just show both
    lines in the tagline style below — graceful, not broken. */
+/* Round 3 Task B: Aisha wants "BLÓMINOR" only, no tagline anywhere —
+   dropped the "Nordic Botanical Jewelry" second line that used to live
+   here via :first-line split (Round 1). Single-line wordmark now. */
 .footer::before {
-  content: "BLÓMINOR\A Nordic Botanical Jewelry";
-  white-space: pre-line;
+  content: "BLÓMINOR";
   display: block;
   font-family: var(--blm-font-heading);
-  font-style: italic;
-  font-size: 1rem;
-  color: var(--blm-sage);
-  letter-spacing: 0.02em;
-  margin-bottom: var(--blm-space-lg);
-}
-.footer::before:first-line {
-  font-size: 2rem;
-  font-style: normal;
   font-weight: 400;
+  font-size: 2rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--blm-parchment);
+  margin-bottom: var(--blm-space-lg);
 }
 
 .footer a { color: var(--blm-sage); opacity: 1; transition: color var(--blm-dur-fast) var(--blm-ease); }
