@@ -1,0 +1,24 @@
+{%- doc -%}
+  Reusable pre-order notice banner.
+
+  @param {string} [delivery_estimate] - e.g. "6-8 weeks"
+  @param {string} [message_override] - full custom message, overrides the default sentence entirely
+
+  @example
+  {% render 'blm-preorder-notice', delivery_estimate: '6-8 weeks' %}
+{%- enddoc -%}
+<div class="blm-preorder-notice">
+  <span class="blm-preorder-notice__icon">{% render 'blm-icon-leaf' %}</span>
+  <p class="blm-preorder-notice__text">
+    {% if message_override != blank %}
+      {{ message_override }}
+    {% else %}
+      <em>Pre-order</em> · Your piece will be crafted and shipped after production. Estimated delivery:
+      {% if delivery_estimate != blank %}
+        {{ delivery_estimate }}
+      {% else %}
+        <span class="blm-preorder-notice__tbc">[to confirm with manufacturer]</span>
+      {% endif %}. Full payment is taken at pre-order.
+    {% endif %}
+  </p>
+</div>

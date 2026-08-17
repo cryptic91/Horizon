@@ -1,0 +1,43 @@
+{% if section.settings.enabled %}
+  <div class="blm-product-preorder-banner" {{ section.shopify_attributes }}>
+    <div class="blm-container">
+      {% render 'blm-preorder-notice',
+        delivery_estimate: section.settings.delivery_estimate,
+        message_override: section.settings.message_override
+      %}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Pre-order banner",
+  "tag": "section",
+  "class": "blm-product-preorder-banner-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Show pre-order banner",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "delivery_estimate",
+      "label": "Delivery estimate (e.g. \"6-8 weeks\")",
+      "info": "Leave blank to show '[to confirm with manufacturer]'"
+    },
+    {
+      "type": "text",
+      "id": "message_override",
+      "label": "Custom message override (optional)",
+      "info": "If set, replaces the default sentence entirely."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pre-order banner"
+    }
+  ]
+}
+{% endschema %}
