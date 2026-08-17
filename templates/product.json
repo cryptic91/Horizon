@@ -8,6 +8,14 @@
  * ------------------------------------------------------------
  */{
   "sections": {
+    "product_preorder_banner_blm": {
+      "type": "blm-product-preorder-banner",
+      "settings": {
+        "enabled": true,
+        "delivery_estimate": "",
+        "message_override": ""
+      }
+    },
     "main": {
       "type": "product-information",
       "blocks": {
@@ -499,6 +507,7 @@
     }
   },
   "order": [
+    "product_preorder_banner_blm",
     "main",
     "product_storytelling_blm",
     "product_recommendations_qggXJq"
