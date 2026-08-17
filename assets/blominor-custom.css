@@ -1862,4 +1862,24 @@ li a {
   color: #a13d3d;
 }
 
+/* ------------------------------------------------------------------------
+   Footer contact refinement (Round 3 Task I) — appended to section 11.
+   Real footer nav/contact links are menu- and block-driven from
+   footer-group.json, which is auto-generated/off-limits (rule 3) — I
+   can't add the actual email/Instagram/menu blocks from here. This is
+   a styling HOOK for Rakib: apply the "Custom CSS class" field (if the
+   block type supports it) or wrap link text with this class via a Text
+   block, and it'll render as a prominent Cormorant-italic sage link,
+   matching what Task I5 asked for. See NIGHT-LOG-3.md for full context.
+   ------------------------------------------------------------------------ */
+.blm-footer-contact-link {
+  font-family: var(--blm-font-heading);
+  font-style: italic;
+  font-size: 1.125rem;
+  color: var(--blm-sage);
+}
+.blm-footer-contact-link:hover {
+  color: var(--blm-parchment);
+}
+
 /* END OF FILE */
