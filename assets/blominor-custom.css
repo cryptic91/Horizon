@@ -1882,4 +1882,52 @@ li a {
   color: var(--blm-parchment);
 }
 
+/* ------------------------------------------------------------------------
+   38. Pre-order notice (snippets/blm-preorder-notice.liquid,
+   sections/blm-product-preorder-banner.liquid)
+   ------------------------------------------------------------------------ */
+.blm-product-preorder-banner {
+  padding-top: var(--blm-space-lg);
+  padding-bottom: 0;
+}
+
+.blm-preorder-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--blm-space-sm);
+  background: var(--blm-parchment-2);
+  border: 1px solid var(--blm-forest);
+  border-radius: var(--blm-radius-sm);
+  padding: var(--blm-space-md) var(--blm-space-lg);
+}
+
+.blm-preorder-notice__icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--blm-forest);
+  margin-top: 2px;
+}
+.blm-preorder-notice__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.blm-preorder-notice__text {
+  font-family: var(--blm-font-body);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--blm-ink);
+  margin: 0;
+}
+.blm-preorder-notice__text em {
+  font-family: var(--blm-font-heading);
+  font-style: italic;
+  font-size: 1rem;
+}
+.blm-preorder-notice__tbc {
+  color: var(--blm-muted);
+  font-style: italic;
+}
+
 /* END OF FILE */
