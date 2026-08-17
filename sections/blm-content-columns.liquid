@@ -8,6 +8,9 @@
       {% for block in section.blocks %}
         {% if block.type == 'column' %}
           <div class="blm-content-columns__col" {{ block.shopify_attributes }}>
+            {% if block.settings.eyebrow != blank %}
+              <span class="blm-eyebrow">{{ block.settings.eyebrow }}</span>
+            {% endif %}
             {% if block.settings.title != blank %}
               <h3 class="blm-content-columns__col-title">{{ block.settings.title }}</h3>
             {% endif %}
@@ -38,6 +41,11 @@
       "type": "column",
       "name": "Column",
       "settings": [
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow (optional)"
+        },
         {
           "type": "text",
           "id": "title",
