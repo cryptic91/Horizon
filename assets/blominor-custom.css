@@ -1572,4 +1572,48 @@ li a {
 .blm-corner-ornament--bottom-left { bottom: 8px; left: 8px; transform: scaleY(-1); }
 .blm-corner-ornament--bottom-right { bottom: 8px; right: 8px; transform: scale(-1, -1); }
 
+/* ------------------------------------------------------------------------
+   33. Editorial content (sections/blm-editorial-content.liquid)
+   ------------------------------------------------------------------------ */
+.blm-editorial-content {
+  padding-top: var(--blm-space-3xl);
+  padding-bottom: var(--blm-space-3xl);
+}
+
+.blm-editorial-content__inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.blm-editorial-content__heading {
+  margin: 0 0 var(--blm-space-lg);
+}
+
+.blm-editorial-content__body {
+  font-family: var(--blm-font-body);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--blm-ink);
+  text-align: left;
+}
+
+.blm-editorial-content__body p:first-of-type::first-letter {
+  font-family: var(--blm-font-heading);
+  font-style: italic;
+  font-size: 3em;
+  line-height: 0.8;
+  float: left;
+  padding-right: 8px;
+  padding-top: 4px;
+  color: var(--blm-forest);
+}
+
+.blm-editorial-content__body p {
+  margin: 0 0 var(--blm-space-lg);
+}
+.blm-editorial-content__body p:last-child {
+  margin-bottom: 0;
+}
+
 /* END OF FILE */
