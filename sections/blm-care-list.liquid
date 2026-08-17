@@ -1,0 +1,74 @@
+<div class="blm-care-list blm-cream-section" {{ section.shopify_attributes }}>
+  <div class="blm-container">
+    {% if section.settings.heading != blank %}
+      <h2 class="blm-care-list__heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <ul class="blm-care-list__grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'care_item' %}
+          <li class="blm-care-list__item" {{ block.shopify_attributes }}>
+            <span class="blm-care-list__icon">
+              {% case block.settings.icon %}
+                {% when 'leaf' %}
+                  {% render 'blm-icon-leaf' %}
+                {% when 'flower' %}
+                  {% render 'blm-icon-flower' %}
+                {% when 'gem' %}
+                  {% render 'blm-icon-gem' %}
+              {% endcase %}
+            </span>
+            <span class="blm-care-list__text">{{ block.settings.text }}</span>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Care list",
+  "tag": "section",
+  "class": "blm-care-list-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "General Care"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "care_item",
+      "name": "Care item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "leaf", "label": "Leaf" },
+            { "value": "flower", "label": "Flower" },
+            { "value": "gem", "label": "Gem" }
+          ],
+          "default": "leaf"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Instruction text",
+          "default": "Care instruction goes here."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Care list"
+    }
+  ]
+}
+{% endschema %}
