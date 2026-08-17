@@ -1679,4 +1679,121 @@ li a {
   color: var(--blm-ink);
 }
 
+/* ------------------------------------------------------------------------
+   35. Size table (sections/blm-size-table.liquid)
+   ------------------------------------------------------------------------ */
+.blm-size-table {
+  padding-top: var(--blm-space-2xl);
+  padding-bottom: var(--blm-space-xl);
+}
+
+.blm-size-table__inner {
+  text-align: center;
+}
+
+.blm-size-table__heading {
+  margin: 0 0 var(--blm-space-sm);
+}
+
+.blm-size-table__intro {
+  color: var(--blm-muted);
+  max-width: 60ch;
+  margin: 0 auto var(--blm-space-xl);
+}
+
+.blm-size-table__scroll {
+  overflow-x: auto;
+  text-align: left;
+}
+
+.blm-size-table__table {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-top: 1px solid var(--blm-forest);
+  border-bottom: 1px solid var(--blm-forest);
+}
+
+.blm-size-table__table th,
+.blm-size-table__table td {
+  padding: 14px 20px;
+  text-align: left;
+  font-family: var(--blm-font-body);
+  font-size: 0.9375rem;
+  border-bottom: 1px solid var(--blm-border);
+}
+
+.blm-size-table__table thead th {
+  font-family: var(--blm-font-heading);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--blm-ink);
+}
+
+.blm-size-table__table tbody th {
+  font-weight: 500;
+  color: var(--blm-ink);
+}
+
+.blm-size-table__table tbody tr:last-child th,
+.blm-size-table__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.blm-size-table__pending {
+  color: var(--blm-muted);
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------------------
+   36. Measuring instructions (sections/blm-measuring-instructions.liquid)
+   ------------------------------------------------------------------------ */
+.blm-measuring-instructions {
+  padding-top: var(--blm-space-xl);
+  padding-bottom: var(--blm-space-2xl);
+}
+
+.blm-measuring-instructions__inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.blm-measuring-instructions__heading {
+  text-align: center;
+  margin: 0 0 var(--blm-space-lg);
+}
+
+.blm-measuring-instructions__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--blm-space-md);
+}
+
+.blm-measuring-instructions__step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--blm-space-md);
+}
+
+.blm-measuring-instructions__number {
+  flex-shrink: 0;
+  font-family: var(--blm-font-heading);
+  font-size: 1.5rem;
+  color: var(--blm-forest);
+  line-height: 1;
+  min-width: 28px;
+}
+
+.blm-measuring-instructions__text {
+  font-family: var(--blm-font-body);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--blm-ink);
+  padding-top: 4px;
+}
+
 /* END OF FILE */
