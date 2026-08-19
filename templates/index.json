@@ -273,13 +273,6 @@
       },
       "block_order": ["pillar_1", "pillar_2", "pillar_3"],
       "settings": {}
-    },
-    "newsletter_blm": {
-      "type": "blm-newsletter",
-      "settings": {
-        "heading": "Stay in touch",
-        "body": "Occasional letters from BLÓMINOR — new pieces, quiet stories, no noise."
-      }
     }
   },
   "order": [
@@ -288,7 +281,6 @@
     "product_list_fa6P9H",
     "image_quote_blm",
     "trust_pillars_blm",
-    "newsletter_blm",
     "trust_marquee_section"
   ]
 }
