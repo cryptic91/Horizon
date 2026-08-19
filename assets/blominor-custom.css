@@ -1966,4 +1966,80 @@ li a {
   margin: 4px 0 0;
 }
 
+/* ------------------------------------------------------------------------
+   39. Custom hero (sections/blm-hero-custom.liquid) — Round 4 Fix B
+   ------------------------------------------------------------------------ */
+.blm-hero-custom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--blm-forest); /* visible fallback if even the asset fallback is missing */
+  overflow: hidden;
+}
+
+.blm-hero-custom__overlay {
+  position: absolute;
+  inset: 0;
+  background: #000;
+}
+
+.blm-hero-custom__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--blm-space-2xl);
+  padding-bottom: var(--blm-space-2xl);
+}
+
+.blm-hero-custom--align-left .blm-hero-custom__inner {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.blm-hero-custom__eyebrow {
+  color: inherit;
+  opacity: 0.85;
+}
+
+.blm-hero-custom__heading {
+  font-family: var(--blm-font-heading);
+  font-weight: 400;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--blm-space-md);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
+}
+
+.blm-hero-custom__subheading {
+  font-family: var(--blm-font-body);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  max-width: 42ch;
+  margin: 0 0 var(--blm-space-lg);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+.blm-hero-custom__button {
+  padding: 16px 42px !important;
+  font-size: 0.9375rem !important;
+}
+
+@media (max-width: 768px) {
+  .blm-hero-custom__heading {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  }
+  .blm-hero-custom__button {
+    width: 100%;
+    padding: 12px 24px !important;
+  }
+}
+
 /* END OF FILE */
