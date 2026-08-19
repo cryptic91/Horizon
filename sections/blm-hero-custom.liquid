@@ -1,0 +1,130 @@
+{%- liquid
+  assign bg_url = blank
+  if section.settings.image != blank
+    assign bg_url = section.settings.image | image_url: width: 2000
+  elsif section.settings.image_asset_fallback != blank
+    assign bg_url = section.settings.image_asset_fallback | asset_url
+  endif
+-%}
+<section
+  role="banner"
+  class="blm-hero-custom blm-hero-custom--align-{{ section.settings.text_alignment }}"
+  style="
+    min-height: {{ section.settings.min_height }}px;
+    {% if bg_url != blank %}background-image: url({{ bg_url }});{% endif %}
+  "
+  {{ section.shopify_attributes }}
+>
+  {% if bg_url != blank %}
+    <span class="visually-hidden">
+      {{ section.settings.image.alt | default: section.settings.heading | default: 'BLÓMINOR hero image' }}
+    </span>
+  {% endif %}
+
+  <div class="blm-hero-custom__overlay" style="opacity: {{ section.settings.overlay_opacity }};"></div>
+
+  <div class="blm-container blm-hero-custom__inner" style="color: {{ section.settings.text_color }};">
+    {% if section.settings.eyebrow != blank %}
+      <span class="blm-eyebrow blm-hero-custom__eyebrow">{{ section.settings.eyebrow }}</span>
+    {% endif %}
+    {% if section.settings.heading != blank %}
+      <h1 class="blm-hero-custom__heading">{{ section.settings.heading }}</h1>
+    {% endif %}
+    {% if section.settings.subheading != blank %}
+      <p class="blm-hero-custom__subheading">{{ section.settings.subheading }}</p>
+    {% endif %}
+    {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+      <a href="{{ section.settings.button_link }}" class="button button--primary blm-hero-custom__button">
+        {{ section.settings.button_label }}
+      </a>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom hero",
+  "tag": "section",
+  "class": "blm-hero-custom-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image",
+      "info": "Takes priority over the theme-asset fallback below once set."
+    },
+    {
+      "type": "text",
+      "id": "image_asset_fallback",
+      "label": "Fallback image filename (in assets/)",
+      "default": "hero-fjord-turquoise.jpg",
+      "info": "Used only while no image is picked above."
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 0.8,
+      "step": 0.05,
+      "default": 0.35
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#F7F6F2"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        { "value": "center", "label": "Center" },
+        { "value": "left", "label": "Left" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "min_height",
+      "label": "Minimum height (px)",
+      "min": 400,
+      "max": 900,
+      "step": 20,
+      "default": 720
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom hero"
+    }
+  ]
+}
+{% endschema %}
