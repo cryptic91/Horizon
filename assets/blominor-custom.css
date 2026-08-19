@@ -183,7 +183,7 @@ a:hover {
 
 /* Nav links — don't get link color treatment */
 .header a,
-.footer a,
+footer a,
 .menu a,
 nav a {
   color: inherit;
@@ -388,24 +388,28 @@ cart-icon {
 
 /* ------------------------------------------------------------------------
    11. Footer polish
+   ROUND 4 FIX D — ROOT CAUSE FOUND: every rule in this section targeted
+   `.footer` (a class), but theme.liquid's actual markup is a bare
+   `<footer>` tag with NO class attribute at all (confirmed by reading
+   layout/theme.liquid directly — line ~355 is literally `<footer>`,
+   and neither footer.liquid nor footer-utilities.liquid ever emit a
+   "footer" class anywhere). This entire section has been dead code
+   since Round 1 — none of it ever matched anything in the rendered
+   DOM. Converted every selector below from `.footer` to the `footer`
+   element selector. This is why Bug 4 (empty-looking footer) and
+   Bug 3's footer-link-color mismatch both trace back here.
    ------------------------------------------------------------------------ */
-.footer {
+footer {
   background: var(--blm-forest);
   color: var(--blm-parchment);
   padding-top: var(--blm-space-3xl);
   padding-bottom: var(--blm-space-xl);
 }
 
-/* Wordmark + tagline — footer-group.json has no editable content area
-   for this (and it's an auto-generated section file we don't touch),
-   so it's added via ::before/:first-line. Line 1 = wordmark, line 2 =
-   tagline. :first-line on generated content is supported in current
-   Chrome/Edge/Firefox/Safari 16.4+; older browsers just show both
-   lines in the tagline style below — graceful, not broken. */
-/* Round 3 Task B: Aisha wants "BLÓMINOR" only, no tagline anywhere —
-   dropped the "Nordic Botanical Jewelry" second line that used to live
-   here via :first-line split (Round 1). Single-line wordmark now. */
-.footer::before {
+/* Wordmark — footer-group.json has no editable content area for this
+   (and it's an auto-generated section file we don't touch), so it's
+   added via ::before. Aisha wants "BLÓMINOR" only, no tagline. */
+footer::before {
   content: "BLÓMINOR";
   display: block;
   font-family: var(--blm-font-heading);
@@ -417,10 +421,10 @@ cart-icon {
   margin-bottom: var(--blm-space-lg);
 }
 
-.footer a { color: var(--blm-sage); opacity: 1; transition: color var(--blm-dur-fast) var(--blm-ease); }
-.footer a:hover { color: var(--blm-parchment); }
+footer a { color: var(--blm-sage); opacity: 1; transition: color var(--blm-dur-fast) var(--blm-ease); }
+footer a:hover { color: var(--blm-parchment); }
 
-.footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6 {
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
   color: var(--blm-parchment);
   font-family: var(--blm-font-body) !important;
   font-size: 0.75rem !important;
@@ -430,15 +434,15 @@ cart-icon {
 }
 
 /* Newsletter signup */
-.footer .email-signup__input {
+footer .email-signup__input {
   background: transparent !important;
   border: 1px solid var(--blm-parchment) !important;
   color: var(--blm-parchment) !important;
 }
-.footer .email-signup__input::placeholder {
+footer .email-signup__input::placeholder {
   color: rgba(247, 246, 242, 0.6);
 }
-.footer .email-signup__button {
+footer .email-signup__button {
   background: var(--blm-forest-dark) !important;
   color: var(--blm-parchment) !important;
 }
