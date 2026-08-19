@@ -1,0 +1,60 @@
+{%- doc -%}
+  Optional footer content block — wordmark, tagline, email, Instagram.
+  Opt-in via the "enabled" setting so it never renders unless someone
+  deliberately adds it to the footer via the theme editor.
+{%- enddoc -%}
+{% if section.settings.enabled %}
+  <div class="blm-footer-fallback" {{ section.shopify_attributes }}>
+    <p class="blm-footer-fallback__wordmark">BLÓMINOR</p>
+    {% if section.settings.tagline != blank %}
+      <p class="blm-footer-fallback__tagline">{{ section.settings.tagline }}</p>
+    {% endif %}
+    <div class="blm-footer-fallback__links">
+      {% if section.settings.email != blank %}
+        <a href="mailto:{{ section.settings.email }}" class="blm-footer-contact-link">{{ section.settings.email }}</a>
+      {% endif %}
+      {% if section.settings.instagram_handle != blank %}
+        <a href="https://instagram.com/{{ section.settings.instagram_handle | remove: '@' }}" class="blm-footer-contact-link" target="_blank" rel="noopener">{{ section.settings.instagram_handle }}</a>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Footer fallback content",
+  "tag": "section",
+  "class": "blm-footer-fallback-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Show this content",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline (optional)",
+      "info": "Leave blank — Aisha wants \"BLÓMINOR\" only, no tagline, as of Round 3."
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email",
+      "default": "kontakt@blominor.no"
+    },
+    {
+      "type": "text",
+      "id": "instagram_handle",
+      "label": "Instagram handle",
+      "default": "@blominor"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer fallback content"
+    }
+  ]
+}
+{% endschema %}
