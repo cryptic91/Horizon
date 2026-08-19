@@ -288,6 +288,28 @@ nav a {
   background: var(--blm-parchment) !important;
 }
 
+/* Round 4 Fix A — defensive reinforcement, not a root-cause fix.
+   Investigated the reported "header renders at bottom of first
+   viewport" bug: found no positioning rule anywhere in this file that
+   could cause it (section 10 only ever styled typography/color before
+   this). Confirmed via header-group.json that enable_sticky_header is
+   already "always" and enable_transparent_header_home is already
+   false — both native, correct, untouched. base.css's transparent-
+   header pull-up logic (body:has(.header[transparent]) ...) only
+   engages when transparent is actually set, which it isn't here, so
+   hero isn't being pulled up under the header either. Sticky itself
+   comes from header.liquid's own scoped stylesheet
+   (.header-section:has(#header-component[sticky='always'])), which is
+   stock and functioning. Most likely explanation: Bug 2's broken/empty
+   hero (no image, large min-height) visually dominates the first
+   screen so heavily that the correctly-positioned, thin real header
+   is easy to mistake as "pushed down" — should look normal once Bug B
+   fixes the hero. Adding z-index insurance regardless, since it's
+   harmless and was explicitly asked for. */
+.header-section {
+  z-index: 100;
+}
+
 /* Wordmark — override inline --font-family and --font-weight custom props */
 .header-logo,
 a.header-logo {
