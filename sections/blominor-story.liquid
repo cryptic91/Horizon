@@ -1,3 +1,11 @@
+{%- liquid
+  assign blm_story_bg_url = blank
+  if section.settings.image != blank
+    assign blm_story_bg_url = section.settings.image | image_url: width: 1600
+  elsif section.settings.image_asset_fallback != blank
+    assign blm_story_bg_url = section.settings.image_asset_fallback | asset_url
+  endif
+-%}
 <section
   class="blominor-story section-spacing {% if section.settings.parchment_background %}blominor-story--parchment{% endif %}"
   style="--blominor-story-padding: {{ section.settings.padding }}px;"
@@ -16,6 +24,14 @@
               sizes: '(min-width: 750px) 50vw, 100vw',
               alt: section.settings.image.alt | default: section.settings.heading
           }}
+        {% elsif section.settings.image_asset_fallback != blank %}
+          <img
+            src="{{ blm_story_bg_url }}"
+            loading="lazy"
+            decoding="async"
+            class="blominor-story__image"
+            alt="{{ section.settings.heading | default: 'BLÓMINOR' }}"
+          >
         {% else %}
           <div class="blominor-story__placeholder">
             <span>Upload Bergfrue or botanical image</span>
@@ -241,6 +257,12 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_asset_fallback",
+      "label": "Fallback image filename (in assets/)",
+      "info": "Used only while no image is picked above."
     },
     {
       "type": "text",

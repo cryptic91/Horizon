@@ -20,6 +20,7 @@
       "settings": {
         "kicker": "LJÓS Collection",
         "heading": "The Light of the North",
+        "image_asset_fallback": "hero-forest-fog.jpg",
         "text": "<p>Named after the Old Norse word for 'light,' the LJÓS Collection is inspired by the changing light of the North — reflected across fjords, filtering through forest leaves and resting softly on wildflowers. The collection brings together colour, nature and botanical details in pieces designed for everyday moments and special occasions.</p>",
         "button_label": "View Collection",
         "button_link": "shopify://collections/ljos",
