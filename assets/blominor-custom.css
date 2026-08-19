@@ -2046,4 +2046,34 @@ li a {
   }
 }
 
+/* ------------------------------------------------------------------------
+   40. Footer fallback (sections/blm-footer-fallback.liquid) — Round 4 Fix D
+   ------------------------------------------------------------------------ */
+.blm-footer-fallback {
+  padding-bottom: var(--blm-space-lg);
+}
+
+.blm-footer-fallback__wordmark {
+  font-family: var(--blm-font-heading);
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blm-parchment);
+  margin: 0 0 4px;
+}
+
+.blm-footer-fallback__tagline {
+  font-family: var(--blm-font-heading);
+  font-style: italic;
+  color: var(--blm-sage);
+  margin: 0 0 var(--blm-space-md);
+}
+
+.blm-footer-fallback__links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 /* END OF FILE */
